@@ -1,5 +1,9 @@
 import styled from "styled-components"
+import { useState } from "react";
 function Form() {
+
+  const [page, setPage] = useState(0);
+  
   return (
     <FormWrapperOuter>
         <ProgressBar></ProgressBar>
