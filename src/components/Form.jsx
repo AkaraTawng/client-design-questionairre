@@ -86,12 +86,13 @@ function Form() {
         </ProgressBarContainer>
         <FormWrapperInner>
         <Body>{pageDisplay()}</Body>
-        <Footer>
+        <ButtonContainer>
             <PrevButton disabled={page === 0} type="button" onClick={handleDecrementClick}>Back</PrevButton>
             <NextButton  disabled={page === FormTitles.length - 1} type="button" onClick={handleIncrementClick}>Next</NextButton>
-        </Footer>
+        </ButtonContainer>
         </FormWrapperInner>
     </FormWrapperOuter>
+    // <Footer></Footer>
   )
 }
 
@@ -125,7 +126,7 @@ const Body = styled.main`
     
 `;
 
-const Footer = styled.footer`
+const ButtonContainer = styled.div`
     
 `;
 
@@ -136,6 +137,7 @@ const PrevButton = styled.button`
 const NextButton = styled.button`
     
 `;
+
 
 
 export default Form
