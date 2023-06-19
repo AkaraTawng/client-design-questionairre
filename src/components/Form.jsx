@@ -86,7 +86,7 @@ function Form() {
     <FormWrapperOuter>
         <ProgressBar></ProgressBar>
         <FormWrapperInner>
-        <Header><h1>{FormTitles[page]}</h1></Header>
+        <Header></Header>
         <Body>{pageDisplay()}</Body>
         <Footer>
             <PrevButton disabled={page === 0} type="button" onClick={handleDecrementClick}>Back</PrevButton>
@@ -98,7 +98,12 @@ function Form() {
 }
 
 const FormWrapperOuter  = styled.form`
-    
+    background: linear-gradient(#FDB456, #DD7A78, #BA3D9C);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 const ProgressBar = styled.div`
