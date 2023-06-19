@@ -123,11 +123,16 @@ const FormWrapperInner = styled.div`
 
 
 const Body = styled.main`
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 `;
 
 const ButtonContainer = styled.div`
-    
+     display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 const PrevButton = styled.button`
