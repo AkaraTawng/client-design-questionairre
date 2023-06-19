@@ -113,7 +113,6 @@ const ProgressBarContainer = styled.div`
 `;
 const ProgressBar = styled.div`
    height: 100%;
-   /* width: 7.5%; */
    background-color: lightgreen;
 `;
 
