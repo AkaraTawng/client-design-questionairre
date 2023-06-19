@@ -78,15 +78,13 @@ function Form() {
         break;
     }
   }
-
-
-
   
   return (
     <FormWrapperOuter>
-        <ProgressBar></ProgressBar>
+        <ProgressBarContainer>
+          <ProgressBar style={{width: `${page * 8}%`}}></ProgressBar>
+        </ProgressBarContainer>
         <FormWrapperInner>
-        <Header></Header>
         <Body>{pageDisplay()}</Body>
         <Footer>
             <PrevButton disabled={page === 0} type="button" onClick={handleDecrementClick}>Back</PrevButton>
@@ -106,19 +104,23 @@ const FormWrapperOuter  = styled.form`
     align-items: center;
 `;
 
+const ProgressBarContainer = styled.div`
+    background-color: white;
+    height: 10px;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+`;
 const ProgressBar = styled.div`
-    
+   height: 100%;
+   /* width: 7.5%; */
+   background-color: lightgreen;
 `;
 
 const FormWrapperInner = styled.div`
 
 `;
 
-const Header = styled.header`
-    h1 {
-      color: red;
-    }
-`;
 
 const Body = styled.main`
     
