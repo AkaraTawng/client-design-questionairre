@@ -89,8 +89,8 @@ function Form() {
         <Header><h1>{FormTitles[page]}</h1></Header>
         <Body>{pageDisplay()}</Body>
         <Footer>
-            <PrevButton type="button" onClick={handleDecrementClick}>Back</PrevButton>
-            <NextButton type="button" onClick={handleIncrementClick}>Next</NextButton>
+            <PrevButton disabled={page === 0} type="button" onClick={handleDecrementClick}>Back</PrevButton>
+            <NextButton  disabled={page === FormTitles.length - 1} type="button" onClick={handleIncrementClick}>Next</NextButton>
         </Footer>
         </FormWrapperInner>
     </FormWrapperOuter>
