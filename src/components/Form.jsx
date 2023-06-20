@@ -148,6 +148,7 @@ const PrevButton = styled.button`
     border-radius: 50%;
     padding: .35rem .5rem;
     font-size: 1rem;
+    cursor: pointer;
 
     i {
         background: linear-gradient( to right, #FDB456, #DD7A78, #BA3D9C);
@@ -173,6 +174,7 @@ const NextButton = styled.button`
     display: flex;
     /* justify-content: space-around; */
     align-items: center;
+    cursor: pointer;
 
     p {
       color: #BA3D9C;
