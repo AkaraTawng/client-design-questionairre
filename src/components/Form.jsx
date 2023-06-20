@@ -117,6 +117,7 @@ const ProgressBarContainer = styled.div`
 const ProgressBar = styled.div`
    height: 100%;
    background-color: lightgreen;
+   transition: all .5s ease;
 `;
 
 const FormWrapperInner = styled.div`
@@ -175,8 +176,12 @@ const NextButton = styled.button`
 
     p {
       color: #BA3D9C;
-      margin-right: 1rem;
+      margin-right: .5rem;
+      transition: all .3s ease;
     }
+     &:hover p {
+      margin-right: 1rem;
+     }
 
     @supports (background-clip: text) {
       p {
