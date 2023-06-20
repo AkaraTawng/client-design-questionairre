@@ -87,8 +87,8 @@ function Form() {
         <FormWrapperInner>
         <Body>{pageDisplay()}</Body>
         <ButtonContainer>
-            <PrevButton disabled={page === 0} type="button" onClick={handleDecrementClick}>Back</PrevButton>
-            <NextButton  disabled={page === FormTitles.length - 1} type="button" onClick={handleIncrementClick}>Next</NextButton>
+            <PrevButton disabled={page === 0} type="button" onClick={handleDecrementClick}><p>Back</p></PrevButton>
+            <NextButton  disabled={page === FormTitles.length - 1} type="button" onClick={handleIncrementClick}><p>Next</p></NextButton>
         </ButtonContainer>
         </FormWrapperInner>
     </FormWrapperOuter>
@@ -136,11 +136,29 @@ const ButtonContainer = styled.div`
 `;
 
 const PrevButton = styled.button`
-    
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
 `;
 
 const NextButton = styled.button`
-    
+    background-color: white;
+    border: none;
+    padding: .5rem 5rem;
+    border-radius: 30px;
+    font-size: 1rem;
+
+    p {
+      color: #BA3D9C;
+    }
+
+    @supports (background-clip: text) {
+      p {
+        background: linear-gradient(#FDB456, #DD7A78, #BA3D9C);
+        background-clip: text;
+        color: transparent;
+      }
+    }
 `;
 
 
