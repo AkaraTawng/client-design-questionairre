@@ -90,7 +90,7 @@ function Form() {
         <Body>{pageDisplay()}</Body>
         <ButtonContainer>
             { page > 0 && <PrevButton disabled={page === 0} type="button" onClick={handleDecrementClick}><i class="fa-solid fa-arrow-left-long"></i></PrevButton>}
-            <NextButton  disabled={page === FormTitles.length - 1} type="button" onClick={handleIncrementClick}><p>Next</p></NextButton>
+            <NextButton  disabled={page === FormTitles.length - 1} type="button" onClick={handleIncrementClick}><p>Next</p><i class="fa-solid fa-arrow-right-long"></i></NextButton>
         </ButtonContainer>
         </FormWrapperInner>
     </FormWrapperOuter>
@@ -165,13 +165,17 @@ const PrevButton = styled.button`
 const NextButton = styled.button`
     background-color: white;
     border: none;
-    padding: .5rem 5rem;
+    padding: 0 3rem;
     border-radius: 30px;
     font-size: 1rem;
     margin-top: 3rem;
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
 
     p {
       color: #BA3D9C;
+      margin-right: 1rem;
     }
 
     @supports (background-clip: text) {
@@ -180,6 +184,12 @@ const NextButton = styled.button`
         background-clip: text;
         color: transparent;
       }
+    }
+
+    i {
+        background: linear-gradient( to right, #FDB456, #DD7A78, #BA3D9C);
+        background-clip: text;
+        color: transparent;
     }
 `;
 
