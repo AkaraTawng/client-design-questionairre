@@ -25,12 +25,17 @@ function Welcome() {
 const HeaderMessage = styled.h1`
     color: #BA3D9C;
     text-transform: uppercase;
-    font-family: 'Krona One', sans-serif;;
+    font-family: 'Krona One', sans-serif;
+    font-size: 2rem;
+    letter-spacing: .5rem;
+    margin-top: 40vw;
 `;
 
 const BodyText = styled.p`
   color: white;
   font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  width: 80%;
 `;
  
 export default Welcome

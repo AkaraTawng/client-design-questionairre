@@ -17,6 +17,8 @@ import Submit from './Submit';
 
 
 
+
+
 function Form() {
 
   const [page, setPage] = useState(0);
@@ -87,7 +89,7 @@ function Form() {
         <FormWrapperInner>
         <Body>{pageDisplay()}</Body>
         <ButtonContainer>
-            <PrevButton disabled={page === 0} type="button" onClick={handleDecrementClick}><p>Back</p></PrevButton>
+            <PrevButton disabled={page === 0} type="button" onClick={handleDecrementClick}><i class="fa-solid fa-arrow-left-long"></i></PrevButton>
             <NextButton  disabled={page === FormTitles.length - 1} type="button" onClick={handleIncrementClick}><p>Next</p></NextButton>
         </ButtonContainer>
         </FormWrapperInner>
@@ -102,7 +104,7 @@ const FormWrapperOuter  = styled.form`
     width: 100vw;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 `;
 
 const ProgressBarContainer = styled.div`
@@ -122,11 +124,12 @@ const FormWrapperInner = styled.div`
 `;
 
 
+
 const Body = styled.main`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 `;
 
 const ButtonContainer = styled.div`
@@ -137,8 +140,26 @@ const ButtonContainer = styled.div`
 
 const PrevButton = styled.button`
     position: absolute;
-    top: 1rem;
-    left: 1rem;
+    top: 1.5rem;
+    left: .8rem;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    padding: .35rem .5rem;
+    font-size: 1rem;
+
+    i {
+        background: linear-gradient( to right, #FDB456, #DD7A78, #BA3D9C);
+        background-clip: text;
+        color: transparent;
+    }
+     
+
+ 
+   
+    
+    
+  
 `;
 
 const NextButton = styled.button`
@@ -147,6 +168,7 @@ const NextButton = styled.button`
     padding: .5rem 5rem;
     border-radius: 30px;
     font-size: 1rem;
+    margin-top: 3rem;
 
     p {
       color: #BA3D9C;
@@ -154,7 +176,7 @@ const NextButton = styled.button`
 
     @supports (background-clip: text) {
       p {
-        background: linear-gradient(#FDB456, #DD7A78, #BA3D9C);
+        background: linear-gradient( to right, #FDB456, #DD7A78, #BA3D9C);
         background-clip: text;
         color: transparent;
       }
