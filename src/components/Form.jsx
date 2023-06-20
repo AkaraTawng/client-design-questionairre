@@ -89,7 +89,7 @@ function Form() {
         <FormWrapperInner>
         <Body>{pageDisplay()}</Body>
         <ButtonContainer>
-            <PrevButton disabled={page === 0} type="button" onClick={handleDecrementClick}><i class="fa-solid fa-arrow-left-long"></i></PrevButton>
+            { page > 0 && <PrevButton disabled={page === 0} type="button" onClick={handleDecrementClick}><i class="fa-solid fa-arrow-left-long"></i></PrevButton>}
             <NextButton  disabled={page === FormTitles.length - 1} type="button" onClick={handleIncrementClick}><p>Next</p></NextButton>
         </ButtonContainer>
         </FormWrapperInner>
