@@ -5,12 +5,21 @@ function PersonalInfo() {
   return (
     <PersonalInfoContainer>
       <InputContainer>
-        <NameInput type='text' placeholder=''/>
+        <Input type='text' placeholder=''/>
         <Label>First and Last Name</Label>
       </InputContainer>
-      <EmailInput type='email' placeholder='Email'/>
-      <CompanyNameInput  type='text' placeholder='Company Name'/>
-      <CompanyIndustryInput  type='text' placeholder='Company Industry'/>
+      <InputContainer>
+        <Input type='email' placeholder=''/>
+        <Label>Email</Label>
+      </InputContainer>
+      <InputContainer>
+        <Input  type='text' placeholder=''/>
+        <Label>Company Name</Label>
+      </InputContainer>
+      <InputContainer>
+        <Input  type='text' placeholder=''/>
+        <Label>Company Industry</Label>
+      </InputContainer>
     </PersonalInfoContainer>
   )
 }
@@ -18,8 +27,8 @@ function PersonalInfo() {
 const PersonalInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  height: 15vh;
+  justify-content: space-between;
+  height: 19vh;
   
 `;
 
@@ -30,19 +39,17 @@ const InputContainer = styled.div`
   align-items: center;
 `;
 
-
 const Label = styled.span`
   position: absolute;
   left: 0;
   padding-left: .2rem;
   font-size: 1rem;
-  color: #6d6d6d;
   color: #e6e5e5;
   pointer-events: none;
   transition: 0.6s;
 `;
 
-const NameInput = styled.input`
+const Input = styled.input`
   width: 100%;
   padding: .6rem 1.2rem;
   border: none;
@@ -63,18 +70,6 @@ const NameInput = styled.input`
     transform: translateY(-25px);
     font-size: 0.75rem;
   }
-`;
-
-const EmailInput = styled.input`
-  
-`;
-
-const CompanyNameInput = styled.input`
-  
-`;
-
-const CompanyIndustryInput = styled.input`
-  
 `;
 
 export default PersonalInfo
