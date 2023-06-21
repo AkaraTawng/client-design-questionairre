@@ -44,13 +44,13 @@ const Label = styled.span`
 
 const NameInput = styled.input`
   width: 100%;
-  padding: 1rem 1.2rem;
+  padding: .6rem 1.2rem;
   border: none;
   font-size: .9rem;
   outline-color: transparent;
   background-color: transparent;
   border-bottom: 2px solid white;
-  color: #e6e5e5;
+  color: white;
 
   &:focus {
     /* border: 3px solid #ffda37; */
@@ -58,6 +58,7 @@ const NameInput = styled.input`
 
   &:not(:placeholder-shown) + span,
   &:focus + span {
+    color: white;
     transform: translateX(10px);
     transform: translateY(-25px);
     font-size: 0.75rem;
