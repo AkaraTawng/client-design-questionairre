@@ -56,11 +56,11 @@ const Input = styled.input`
   font-size: .9rem;
   outline-color: transparent;
   background-color: transparent;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #e6e5e5;
   color: white;
 
   &:focus {
-    /* border: 3px solid #ffda37; */
+    border-bottom: 2px solid #fff;
   }
 
   &:not(:placeholder-shown) + span,
