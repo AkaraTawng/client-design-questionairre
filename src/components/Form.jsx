@@ -89,7 +89,7 @@ function Form() {
         <FormWrapperInner>
         <Body>{pageDisplay()}</Body>
         <ButtonContainer>
-            { page > 0 && <PrevButton disabled={page === 0} type="button" onClick={handleDecrementClick}><i class="fa-solid fa-arrow-left-long"></i></PrevButton>}
+            { page > 0 && <PrevButton disabled={page === 0} type="button" onClick={handleDecrementClick}><i className="fa-solid fa-arrow-left-long"></i></PrevButton>}
             <NextButton  disabled={page === FormTitles.length - 1} type="button" onClick={handleIncrementClick}>{page > 0 ? <p>Next</p> : <p>Let's go!</p>}<i class="fa-solid fa-arrow-right-long"></i></NextButton>
         </ButtonContainer>
         </FormWrapperInner>
@@ -104,7 +104,7 @@ const FormWrapperOuter  = styled.form`
     width: 100vw;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
 `;
 
 const ProgressBarContainer = styled.div`
