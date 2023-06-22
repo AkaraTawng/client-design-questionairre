@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import QuestionText from '../utils/Question';
 
 function BackgroundInfo() {
   return (<>
-    <Question>Do you have content ready for your site?</Question>
+    <QuestionText>Do you have content ready for your site?</QuestionText>
     <SelectionContainer>
       <Input type='radio' id='yes' value='yes' name='background-info-content'/>
       <Label for='yes'>Yes, I have content ready.</Label>
@@ -14,7 +15,7 @@ function BackgroundInfo() {
       <Label for='no'>Not yet. I'm still working on it.</Label>
     </SelectionContainer>
   
-    <Question id='question2'>Is your company legally registered?</Question>
+    <QuestionText>Is your company legally registered?</QuestionText>
     <SelectionContainer>
       <Input type='radio' id='yes' value='yes' name='background-info-legally-registered'/>
       <Label for='yes'>Yes.</Label>
@@ -44,16 +45,7 @@ const Label = styled.label`
   color: white;
 `;
 
-const Question = styled.p`
-  color: white;
-  padding-bottom: .5rem;
-  border-bottom: 1px solid white;
-  width: 80%;
 
-  &#question2 {
-    margin-top: 7rem;
-  }
-`;
 
 const SelectionContainer = styled.div`
   display: flex;
