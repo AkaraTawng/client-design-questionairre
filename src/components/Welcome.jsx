@@ -33,7 +33,6 @@ const HeaderMessage = styled.h1`
 
 const BodyText = styled.p`
   color: white;
-  font-family: 'Montserrat', sans-serif;
   text-align: center;
   width: 80%;
   line-height: 1.5rem;
