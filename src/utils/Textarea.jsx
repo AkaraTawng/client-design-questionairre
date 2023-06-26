@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-function Textarea() {
+function Textarea({placeholder, name}) {
   return (
-    <TextareaInput></TextareaInput>
+    <TextareaInput placeholder={placeholder} name={name}></TextareaInput>
   )
 }
 
