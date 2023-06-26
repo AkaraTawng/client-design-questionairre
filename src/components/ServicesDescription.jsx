@@ -1,4 +1,3 @@
-import React from 'react'
 import Question from '../utils/Question'
 import styled from 'styled-components'
 
@@ -6,7 +5,8 @@ import styled from 'styled-components'
 function ServicesDescription() {
   return (<>
     <Question>What specific services does your company provide? List all that apply.</Question>
-    <Textarea></Textarea>
+    <Textarea placeholder='I.e.: Sell goods or services, disseminate knowledge, increase brand recognition, etc.
+'></Textarea>
     </>)
 }
 
