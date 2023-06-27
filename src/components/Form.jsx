@@ -150,11 +150,18 @@ const PrevButton = styled.button`
     font-size: 1rem;
     cursor: pointer;
 
-    i {
+    @supports (background-clip: text) {
+       i {
         background: linear-gradient( to right, #FDB456, #DD7A78, #BA3D9C);
         background-clip: text;
         color: transparent;
+      }
     }
+
+    i {
+      color: #BA3D9C;
+    }
+   
      
 
  
@@ -174,7 +181,21 @@ const NextButton = styled.button`
     display: flex;
     /* justify-content: space-around; */
     align-items: center;
-    cursor: pointer;
+    cursor: pointer; 
+    
+    @supports (background-clip: text) {
+      p {
+        background: linear-gradient( to right, #FDB456, #DD7A78, #BA3D9C);
+        background-clip: text;
+        color: transparent;
+      }
+      
+      i {
+        background: linear-gradient( to right, #FDB456, #DD7A78, #BA3D9C);
+        background-clip: text;
+        color: transparent;
+      }
+    }
 
     p {
       color: #BA3D9C;
@@ -185,20 +206,13 @@ const NextButton = styled.button`
       margin-right: 1rem;
      }
 
-    @supports (background-clip: text) {
-      p {
-        background: linear-gradient( to right, #FDB456, #DD7A78, #BA3D9C);
-        /* background-clip: text; */
-        -webkit-background-clip: text;
-        color: transparent;
-      }
-    }
+     i {
+      color: #BA3D9C;
+     }
 
-    i {
-        background: linear-gradient( to right, #FDB456, #DD7A78, #BA3D9C);
-        background-clip: text;
-        color: transparent;
-    }
+  
+
+    
 `;
 
 
