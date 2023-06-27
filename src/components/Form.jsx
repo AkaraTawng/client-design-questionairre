@@ -188,7 +188,8 @@ const NextButton = styled.button`
     @supports (background-clip: text) {
       p {
         background: linear-gradient( to right, #FDB456, #DD7A78, #BA3D9C);
-        background-clip: text;
+        /* background-clip: text; */
+        -webkit-background-clip: text;
         color: transparent;
       }
     }
