@@ -1,21 +1,25 @@
 import styled from "styled-components"
 import Textarea from "./Textarea";
+import { useState } from "react";
 
 
 function Checkbox({id, name, value, children, placeholder}) {
-    
-    
+    const [checked, setChecked] = useState(false);
+
+    const displayOtherTextareaInput = (event) => {
+      setChecked(event.target.checked)
+    } 
+
     return ( <>
         <CheckboxContainer>
-            <Input type="checkbox" id={id} name={name} value={value}/>
+            <Input type="checkbox" id={id} name={name} value={value} onChange={displayOtherTextareaInput}/>
             <Label for={id}>
                 {children}
             </Label>
         </CheckboxContainer>  
-        {id === 'other' && 
+        {id === 'other' && checked &&
                 <div className="other-text-input">
                     <Textarea placeholder={placeholder} name={name}></Textarea>
-
                 </div>
             }
   </>)
