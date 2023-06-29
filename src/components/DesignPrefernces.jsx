@@ -1,8 +1,8 @@
-import React from 'react'
+import Question from "../utils/Question"
 
 function DesignPrefernces() {
   return (
-    <div>DesignPrefernces</div>
+    <Question>Do you have any specific design prefernces that should be followed?</Question>
   )
 }
 
