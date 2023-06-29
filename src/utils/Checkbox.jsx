@@ -18,9 +18,7 @@ function Checkbox({id, name, value, children, placeholder}) {
             </Label>
         </CheckboxContainer>  
         {id === 'other' && checked &&
-                <div className="other-text-input">
                     <Textarea placeholder={placeholder} name={name}></Textarea>
-                </div>
             }
   </>)
 }
@@ -38,7 +36,7 @@ const Input = styled.input`
   margin-right: 1rem;
   height: 1.1rem;
   width: 1.1rem;
-  accent-color: grey;
+  accent-color: grey; 
 `;
 
 const Label = styled.label`
