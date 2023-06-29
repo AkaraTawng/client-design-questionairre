@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-function Textarea({placeholder, name}) {
+function Textarea({placeholder, name, id}) {
   return (
-    <TextareaInput placeholder={placeholder} name={name}></TextareaInput>
+    <TextareaInput id={id} placeholder={placeholder} name={name}></TextareaInput>
   )
 }
 
@@ -10,6 +10,10 @@ function Textarea({placeholder, name}) {
 const TextareaInput = styled.textarea`
 width: 70%;
 height: 8rem;
+
+&#favsites {
+  height: 12rem;
+}
 padding: 1rem;
 border-radius: 20px;
 border: none;
