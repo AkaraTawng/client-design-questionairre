@@ -10,13 +10,13 @@ function ContentType() {
     <Checkbox id='video' name='video' value='video'>
       Videos
     </Checkbox>
-    <Checkbox id='music files' name='music files' value='music files'>
+    <Checkbox id='music-files' name='music-files' value='music-files'>
       Music files
     </Checkbox>
-    <Checkbox id='blog posts' name='blog posts' value='blog posts'>
+    <Checkbox id='blog-posts' name='blog-posts' value='blog-posts'>
       Blog posts
     </Checkbox>
-    <Checkbox id='product listings' name='product listings' value='product listings'>
+    <Checkbox id='product-listings' name='product-listings' value='product-listings'>
       Product listings
     </Checkbox>
     <Checkbox id='other' name='other' value='other' placeholder='Please explain.'>
