@@ -4,6 +4,7 @@ import Textarea from "../utils/Textarea"
 function UniqueQualities() {
   return (<>
     <Question>What makes your services unique?</Question>
+    <Textarea placeholder={'Please explain.'} name=''></Textarea>
   </>)
 }
 
