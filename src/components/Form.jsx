@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Welcome from './Welcome';
 import PersonalInfo from './PersonalInfo';
 import BackgroundInfo from './BackgroundInfo';
@@ -14,6 +14,9 @@ import BrandPersonality from './BrandPersonality';
 import DesignPreferences from './DesignPrefernces';
 import FavoriteWebsites from './FavoriteWebsites';
 import Submit from './Submit';
+import emailjs from '@emailjs/browser';
+
+
 
 
 
