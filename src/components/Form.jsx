@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Welcome from './Welcome';
 import PersonalInfo from './PersonalInfo';
 import BackgroundInfo from './BackgroundInfo';
@@ -14,6 +14,9 @@ import BrandPersonality from './BrandPersonality';
 import DesignPreferences from './DesignPrefernces';
 import FavoriteWebsites from './FavoriteWebsites';
 import Submit from './Submit';
+import emailjs from '@emailjs/browser';
+
+
 
 
 
@@ -23,6 +26,18 @@ function Form() {
 
   const [page, setPage] = useState(0);
   const FormTitles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
 
   const handleIncrementClick = (e) => {
     // e.preventDefault();
@@ -82,12 +97,12 @@ function Form() {
   }
   
   return (
-    <FormWrapperOuter>
+    <FormWrapperOuter ref={form} onSubmit={sendEmail}>
         <ProgressBarContainer>
           <ProgressBar style={{width: `${page * 8}%`}}></ProgressBar>
         </ProgressBarContainer>
         <FormWrapperInner>
-        <Body>{pageDisplay()}</Body>
+        <Body>{ }</Body>
         <ButtonContainer>
             { page > 0 && <PrevButton disabled={page === 0} type="button" onClick={handleDecrementClick}><i className="fa-solid fa-arrow-left-long"></i></PrevButton>}
             <NextButton  disabled={page === FormTitles.length - 1} type="button" onClick={handleIncrementClick}>{page > 0 ? <p>Next</p> : <p>Let's go!</p>}<i className="fa-solid fa-arrow-right-long"></i></NextButton>
