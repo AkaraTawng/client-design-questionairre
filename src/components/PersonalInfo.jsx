@@ -9,15 +9,15 @@ function PersonalInfo() {
         <Label>First and Last Name</Label>
       </InputContainer>
       <InputContainer>
-        <Input type='email' placeholder=''/>
+        <Input  name='user_email' type='email' placeholder=''/>
         <Label>Email</Label>
       </InputContainer>
       <InputContainer>
-        <Input  type='text' placeholder=''/>
+        <Input name='user_companyName' type='text' placeholder=''/>
         <Label>Company Name</Label>
       </InputContainer>
       <InputContainer>
-        <Input  type='text' placeholder=''/>
+        <Input name='user_companyIndustry' type='text' placeholder=''/>
         <Label>Company Industry</Label>
       </InputContainer>
     </PersonalInfoContainer>
