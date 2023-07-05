@@ -5,7 +5,7 @@ function PersonalInfo() {
   return (
     <PersonalInfoContainer>
       <InputContainer>
-        <Input type='text' placeholder=''/>
+        <Input name="user_name" type='text' placeholder=''/>
         <Label>First and Last Name</Label>
       </InputContainer>
       <InputContainer>

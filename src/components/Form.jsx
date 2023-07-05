@@ -24,7 +24,7 @@ import emailjs from '@emailjs/browser';
 
 
 function Form() {
-console.log(JSON.stringify(import.meta.env), 'public key')
+// console.log(JSON.stringify(import.meta.env), 'public key')
   const [page, setPage] = useState(0);
   const FormTitles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
   const form = useRef();
@@ -32,9 +32,14 @@ console.log(JSON.stringify(import.meta.env), 'public key')
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(import.meta.env.VITE_REACT_EMAILJS_SERVICE_ID, import.meta.env.VITE_REACT_EMAILJS_TEMPLATE_ID, form.current, import.meta.env.VITE_REACT_EMAILJS_PUBLIC_KEY)
+    emailjs.sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID, 
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
+      form.current, 
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
       .then((result) => {
           console.log(result.text);
+          console.log('message sent');
       }, (error) => {
           console.log(error.text);
       });
