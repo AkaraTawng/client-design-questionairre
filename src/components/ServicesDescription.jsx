@@ -8,8 +8,4 @@ function ServicesDescription() {
     </>)
 }
 
-
-
-
-
 export default ServicesDescription
