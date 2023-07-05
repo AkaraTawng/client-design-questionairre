@@ -22,8 +22,9 @@ import emailjs from '@emailjs/browser';
 
 
 
-function Form() {
 
+function Form() {
+// console.log(JSON.stringify(import.meta.env), 'public key')
   const [page, setPage] = useState(0);
   const FormTitles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
   const form = useRef();
@@ -32,11 +33,13 @@ function Form() {
     e.preventDefault();
 
     emailjs.sendForm(
-      import.meta.env.VITE_REACT_APP_EMAILJS_SERVICE_ID, 
-      import.meta.env.VITE_REACT_APP_EMAILJS_TEMPLATE_ID, 
-      form.current, import.meta.env.VITE_REACT_APP_EMAILJS_PUBLIC_KEY)
+      import.meta.env.VITE_EMAILJS_SERVICE_ID, 
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
+      form.current, 
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
       .then((result) => {
           console.log(result.text);
+          console.log('message sent');
       }, (error) => {
           console.log(error.text);
       });
@@ -109,6 +112,7 @@ function Form() {
         <ButtonContainer>
             { page > 0 && <PrevButton disabled={page === 0} type="button" onClick={handleDecrementClick}><i className="fa-solid fa-arrow-left-long"></i></PrevButton>}
             <NextButton  disabled={page === FormTitles.length - 1} type="button" onClick={handleIncrementClick}>{page > 0 ? <p>Next</p> : <p>Let's go!</p>}<i className="fa-solid fa-arrow-right-long"></i></NextButton>
+            <SubmitBtn type="submit">Submit</SubmitBtn>
         </ButtonContainer>
         </FormWrapperInner>
     </FormWrapperOuter>
@@ -141,8 +145,6 @@ const ProgressBar = styled.div`
 const FormWrapperInner = styled.div`
 
 `;
-
-
 
 const Body = styled.main`
     display: flex;
@@ -179,14 +181,6 @@ const PrevButton = styled.button`
     i {
       color: #BA3D9C;
     }
-   
-     
-
- 
-   
-    
-    
-  
 `;
 
 const NextButton = styled.button`
@@ -227,10 +221,10 @@ const NextButton = styled.button`
      i {
       color: #BA3D9C;
      }
+`;
 
-  
+const SubmitBtn = styled(NextButton)`
 
-    
 `;
 
 

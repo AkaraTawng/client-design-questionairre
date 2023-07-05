@@ -5,7 +5,7 @@ function RadioButton({id, value, name, children}) {
   return (<>
     <SelectionContainer>
         <Input type='radio'  id={id} value={value}  name={name}/>
-        <Label for={id}>
+        <Label htmlForfor={id}>
             {children}
         </Label>
     </SelectionContainer>

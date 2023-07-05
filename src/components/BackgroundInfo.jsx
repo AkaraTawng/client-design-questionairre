@@ -7,25 +7,25 @@ function BackgroundInfo() {
   return (<>
     <QuestionText>Do you have content ready for your site?</QuestionText>
 
-    <RadioButton id='yes-content' value='yes-content' name='background-info-content'>
+    <RadioButton id='yes-content' value='Yes' name='user_contentReady'>
       Yes, I have content ready.
     </RadioButton>
   
-    <RadioButton id='no-content' value='no-content' name='background-info-content'>
+    <RadioButton id='no-content' value='No' name='user_contentReady'>
       Not yet. I'm still working on it.
     </RadioButton>
   
     <QuestionText>Is your company legally registered?</QuestionText>
 
-    <RadioButton id='yes-registered' value='yes-registered' name='background-info-legally-registered' >
+    <RadioButton id='yes-registered' value='Yes' name='user_companyRegistered' >
       Yes.
     </RadioButton>
      
-    <RadioButton id='no-registered' value='no-registered' name='background-info-legally-registered'>
+    <RadioButton id='no-registered' value='No' name='user_companyRegistered'>
       No.
     </RadioButton>
    
-    <RadioButton id='not-yet' value='not-yet' name='background-info-legally-registered'>
+    <RadioButton id='not-yet' value='Not yet' name='user_companyRegistered'>
       I'm in the process of registering it.
     </RadioButton>
     </>
