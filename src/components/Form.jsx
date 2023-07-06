@@ -25,7 +25,7 @@ import emailjs from '@emailjs/browser';
 
 function Form() {
 // console.log(JSON.stringify(import.meta.env), 'public key')
-  const [page, setPage] = useState(13);
+  const [page, setPage] = useState(0);
   const FormTitles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
   const form = useRef();
 
@@ -111,8 +111,8 @@ function Form() {
         <Body>{pageDisplay()}</Body>
         <ButtonContainer>
             { page > 0 && <PrevButton disabled={page === 0} type="button" onClick={handleDecrementClick}><i className="fa-solid fa-arrow-left-long"></i></PrevButton>}
-            <NextButton  disabled={page === FormTitles.length - 1} type="button" onClick={handleIncrementClick}>{page > 0 ? <p>Next</p> : <p>Let's go!</p>}<i className="fa-solid fa-arrow-right-long"></i></NextButton>
-            <SubmitBtn type="submit">Submit</SubmitBtn>
+            {page < FormTitles.length - 1 && <NextButton  disabled={page === FormTitles.length - 1} type="button" onClick={handleIncrementClick}>{page > 0 ? <p>Next</p> : <p>Let's go!</p>}<i className="fa-solid fa-arrow-right-long"></i></NextButton>}
+            {page === FormTitles.length - 1 && <SubmitBtn type="submit"><p>Submit</p> <i className="fa-solid fa-arrow-right-long"></i></SubmitBtn>}
         </ButtonContainer>
         </FormWrapperInner>
     </FormWrapperOuter>
@@ -225,8 +225,7 @@ const NextButton = styled.button`
 
 const SubmitBtn = styled(NextButton)`
 
-`;
-
+`
 
 
 export default Form
