@@ -4,7 +4,7 @@ import styled from "styled-components"
 function RadioButton({id, value, name, children}) {
   return (<>
     <SelectionContainer>
-        <Input type='radio'  id={id} value={value}  name={name}/>
+        <Input type='radio'  id={id} value={value}  name={name} onChange={(e) => console.log(e.target.value)}/>
         <Label htmlForfor={id}>
             {children}
         </Label>

@@ -5,20 +5,19 @@ import RadioButton from '../utils/RadioButton';
 import { useState } from 'react';
 
 function BackgroundInfo() {
-
-  const [contentReady, setContentReady] = useState('')
   
   return (<>
     <QuestionText>Do you have content ready for your site?</QuestionText>
 
-    <RadioButton id='yes-content' value='Yes' name='user_contentReady' onChange={e => setContentReady(e.target.value)}>
+    <RadioButton id='yes-content' value='Yes' name='user_contentReady'>
       Yes, I have content ready.
     </RadioButton>
   
-    <RadioButton id='no-content' value='No' name='user_contentReady' onChange={e => setContentReady(e.target.value)}>
+    <RadioButton id='no-content' value='No' name='user_contentReady'>
       Not yet. I'm still working on it.
     </RadioButton>
   
+
     <QuestionText>Is your company legally registered?</QuestionText>
 
     <RadioButton id='yes-registered' value='Yes' name='user_companyRegistered' >
