@@ -6,16 +6,16 @@ import { useState } from 'react';
 
 function BackgroundInfo() {
 
-  const [contentReady, setContentReadt] = useState('')
+  const [contentReady, setContentReady] = useState('')
   
   return (<>
     <QuestionText>Do you have content ready for your site?</QuestionText>
 
-    <RadioButton id='yes-content' value='Yes' name='user_contentReady'>
+    <RadioButton id='yes-content' value='Yes' name='user_contentReady' onChange={e => setContentReady(e.target.value)}>
       Yes, I have content ready.
     </RadioButton>
   
-    <RadioButton id='no-content' value='No' name='user_contentReady'>
+    <RadioButton id='no-content' value='No' name='user_contentReady' onChange={e => setContentReady(e.target.value)}>
       Not yet. I'm still working on it.
     </RadioButton>
   
