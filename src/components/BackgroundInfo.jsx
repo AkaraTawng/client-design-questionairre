@@ -2,8 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import QuestionText from '../utils/Question';
 import RadioButton from '../utils/RadioButton';
+import { useState } from 'react';
 
 function BackgroundInfo() {
+
+  const [contentReady, setContentReadt] = useState('')
+  
   return (<>
     <QuestionText>Do you have content ready for your site?</QuestionText>
 
