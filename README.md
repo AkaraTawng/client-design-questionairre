@@ -9,5 +9,5 @@
 - Styled Components
 
 # Notable NPM Packages Used
-- [react-toastify-explosion](https://www.npmjs.com/package/react-confetti-explosion)
+- [react-confetti-explosion](https://www.npmjs.com/package/react-confetti-explosion)
 
