@@ -1,10 +1,20 @@
+import { useState, useEffect } from "react";
 import styled from "styled-components"
 
 
+
 function RadioButton({id, value, name, children}) {
+  const [radioState, setRadioState] = useState(value);
+  console.log(radioState, name)
+
+  useEffect(() => {
+    sessionStorage.setItem(name, JSON.stringify(radioState));
+    // sessionStorage.clear();
+  }, [value]);
+
   return (<>
     <SelectionContainer>
-        <Input type='radio'  id={id} value={value}  name={name} onChange={(e) => console.log(e.target.value)}/>
+        <Input type='radio'  id={id} value={value}  name={name} onChange={(e) => setRadioState(e.target.value)}/>
         <Label htmlForfor={id}>
             {children}
         </Label>
@@ -22,7 +32,6 @@ const Input = styled.input`
 const Label = styled.label`
   color: white;
 `;
-
 
 
 const SelectionContainer = styled.div`
