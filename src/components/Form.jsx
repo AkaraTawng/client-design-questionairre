@@ -15,6 +15,7 @@ import DesignPreferences from './DesignPrefernces';
 import FavoriteWebsites from './FavoriteWebsites';
 import Submit from './Submit';
 import emailjs from '@emailjs/browser';
+import ConfettiExplosion from 'react-confetti-explosion';
 
 
 
@@ -24,10 +25,18 @@ import emailjs from '@emailjs/browser';
 
 
 function Form() {
-// console.log(JSON.stringify(import.meta.env), 'public key')
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(13);
+  const [isExploding, setIsExploding] = useState(false);
   const FormTitles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
   const form = useRef();
+  
+  const confettiProps = {
+    force: 0.9,
+    duration: 4000,
+    particleCount: 500,
+    width: 2000, 
+    height: '200vh', 
+  }
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -46,12 +55,10 @@ function Form() {
   };
 
   const handleIncrementClick = (e) => {
-    // e.preventDefault();
     setPage((currPage) => currPage + 1)
   }
 
   const handleDecrementClick = (e) => {
-    // e.preventDefault();
     setPage((currPage) => currPage - 1)
   }
 
@@ -112,7 +119,10 @@ function Form() {
         <ButtonContainer>
             { page > 0 && <PrevButton disabled={page === 0} type="button" onClick={handleDecrementClick}><i className="fa-solid fa-arrow-left-long"></i></PrevButton>}
             {page < FormTitles.length - 1 && <NextButton  disabled={page === FormTitles.length - 1} type="button" onClick={handleIncrementClick}>{page > 0 ? <p>Next</p> : <p>Let's go!</p>}<i className="fa-solid fa-arrow-right-long"></i></NextButton>}
-            {page === FormTitles.length - 1 && <SubmitBtn type="submit"><p>Submit</p><i class="fa-solid fa-paper-plane"></i></SubmitBtn>}
+            {page === FormTitles.length - 1 && <SubmitBtn type="submit" onClick={() => setIsExploding(!isExploding)}><p>Submit</p><i class="fa-solid fa-paper-plane"></i></SubmitBtn>}
+            {isExploding && <ConfettiExplosion {...confettiProps}/>}
+        
+
         </ButtonContainer>
         </FormWrapperInner>
     </FormWrapperOuter>
@@ -190,7 +200,6 @@ const NextButton = styled.button`
     font-size: 1rem;
     margin-top: 3rem;
     display: flex;
-    /* justify-content: space-around; */
     align-items: center;
     cursor: pointer; 
     
@@ -225,6 +234,5 @@ const NextButton = styled.button`
 const SubmitBtn = styled(NextButton)`
 
 `
-
 
 export default Form
