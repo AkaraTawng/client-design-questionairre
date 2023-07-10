@@ -2,8 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import QuestionText from '../utils/Question';
 import RadioButton from '../utils/RadioButton';
+import { useState } from 'react';
 
 function BackgroundInfo() {
+  
   return (<>
     <QuestionText>Do you have content ready for your site?</QuestionText>
 
@@ -15,6 +17,7 @@ function BackgroundInfo() {
       Not yet. I'm still working on it.
     </RadioButton>
   
+
     <QuestionText>Is your company legally registered?</QuestionText>
 
     <RadioButton id='yes-registered' value='Yes' name='user_companyRegistered' >
@@ -31,27 +34,5 @@ function BackgroundInfo() {
     </>
   )
 }
-
-const Input = styled.input`
-  margin-right: 1rem;
-  height: 1.1rem;
-  width: 1.1rem;
-  accent-color: grey;
-`;
-
-const Label = styled.label`
-  color: white;
-`;
-
-
-
-const SelectionContainer = styled.div`
-  display: flex;
-  /* background-color: lightblue; */
-  align-items: center;
-  justify-content: flex-start;
-  width: 80%;
-  height: 5rem;
-`;
 
 export default BackgroundInfo
