@@ -3,25 +3,34 @@ import styled from 'styled-components'
 import { useState } from 'react';
 
 function PersonalInfo() {
-const [value, setValue] = useState('');
-
-const onChange = (e) => setValue(e.target.value);
+const [values, setValues] = useState({
+  firstAndLastName: '',
+  email: '',
+  companyName: '', 
+  companyIndustry: ''
+});
+console.log(values)
+const getHandler = (name) => {
+  return (event) => {
+    setValues({...values, [name]: event.target.value})
+  }
+}
   return (
     <PersonalInfoContainer>
       <InputContainer>
-        <Input name="user_name" type='text' placeholder=''/>
+        <Input name="user_name" type='text' value={values.firstAndLastName} onChange={getHandler('firstAndLastName')} placeholder=''/>
         <Label>First and Last Name</Label>
       </InputContainer>
       <InputContainer>
-        <Input  name='user_email' type='email' placeholder=''/>
+        <Input  name='user_email' type='email' value={values.email} onChange={getHandler('email')} placeholder=''/>
         <Label>Email</Label>
       </InputContainer>
       <InputContainer>
-        <Input name='user_companyName' type='text' placeholder=''/>
+        <Input name='user_companyName' type='text' value={values.companyName} onChange={getHandler('companyName')} placeholder=''/>
         <Label>Company Name</Label>
       </InputContainer>
       <InputContainer>
-        <Input name='user_companyIndustry' type='text' placeholder=''/>
+        <Input name='user_companyIndustry' type='text' value={values.companyIndustry} onChange={getHandler('companyIndustry')} placeholder=''/>
         <Label>Company Industry</Label>
       </InputContainer>
     </PersonalInfoContainer>
