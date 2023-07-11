@@ -5,7 +5,7 @@ import { useState } from 'react';
 function PersonalInfo() {
 const [value, setValue] = useState('');
 
-
+const onChange = (e) => setValue(e.target.value);
   return (
     <PersonalInfoContainer>
       <InputContainer>
