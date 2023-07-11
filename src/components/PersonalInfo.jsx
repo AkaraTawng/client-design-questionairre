@@ -6,7 +6,7 @@ function PersonalInfo() {
 const [firstAndLastName, setfirstAndLastName] = useState(JSON.parse(sessionStorage.getItem('FirstAndLastName' ?? '')));
 const [email, setEmail] = useState(JSON.parse(sessionStorage.getItem('email' ?? '')));
 const [companyName, setCompanyName] = useState(JSON.parse(sessionStorage.getItem('companyName' ?? '')));
-const [companyIndustry, setCompanyIndustry] = useState();
+const [companyIndustry, setCompanyIndustry] = useState(JSON.parse(sessionStorage.getItem('companyIndustry' ?? '')));
 
 // const [values, setValues] = useState({
 //   firstAndLastName: '',
@@ -41,6 +41,7 @@ const handleCompanyNameChange = (e) => {
 
 const handleCompanyIndustryChange = (e) => {
   console.log(companyIndustry)
+  sessionStorage.setItem('companyIndustry', JSON.stringify(companyIndustry));
   setCompanyIndustry(e.target.value)
 }
 
