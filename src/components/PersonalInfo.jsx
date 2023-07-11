@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 function PersonalInfo() {
 const [firstAndLastName, setfirstAndLastName] = useState(JSON.parse(sessionStorage.getItem('FirstAndLastName' ?? '')));
-const [email, setEmail] = useState();
+const [email, setEmail] = useState(JSON.parse(sessionStorage.getItem('email' ?? '')));
 const [companyName, setCompanyName] = useState();
 const [companyIndustry, setCompanyIndustry] = useState();
 
@@ -29,6 +29,7 @@ const handleNameChange = (e) => {
 
 const handleEmailChange = (e) => {
   console.log(email)
+  sessionStorage.setItem('email', JSON.stringify(email));
   setEmail(e.target.value)
 }
 
