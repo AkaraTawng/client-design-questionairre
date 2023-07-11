@@ -20,8 +20,13 @@ import Submit from './Submit';
 
 
 function Form() {
+<<<<<<< Updated upstream
 
   const [page, setPage] = useState(0);
+=======
+  const [page, setPage] = useState(2);
+  const [isExploding, setIsExploding] = useState(false);
+>>>>>>> Stashed changes
   const FormTitles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
   const handleIncrementClick = (e) => {
@@ -90,7 +95,14 @@ function Form() {
         <Body>{pageDisplay()}</Body>
         <ButtonContainer>
             { page > 0 && <PrevButton disabled={page === 0} type="button" onClick={handleDecrementClick}><i className="fa-solid fa-arrow-left-long"></i></PrevButton>}
+<<<<<<< Updated upstream
             <NextButton  disabled={page === FormTitles.length - 1} type="button" onClick={handleIncrementClick}>{page > 0 ? <p>Next</p> : <p>Let's go!</p>}<i className="fa-solid fa-arrow-right-long"></i></NextButton>
+=======
+            {page < FormTitles.length - 1 && <NextButton  disabled={page === FormTitles.length - 1} type="button" onClick={handleIncrementClick}>{page > 0 ? <p>Next</p> : <p>Let's go!</p>}<i className="fa-solid fa-arrow-right-long"></i></NextButton>}
+            <SubmitBtn type="submit" onClick={() => setIsExploding(!isExploding)}><p>Submit</p><i class="fa-solid fa-paper-plane"></i></SubmitBtn>
+            {/* {page === FormTitles.length - 1 && <SubmitBtn type="submit" onClick={() => setIsExploding(!isExploding)}><p>Submit</p><i class="fa-solid fa-paper-plane"></i></SubmitBtn>} */}
+            {isExploding && <ConfettiExplosion {...confettiProps}/>}
+>>>>>>> Stashed changes
         </ButtonContainer>
         </FormWrapperInner>
     </FormWrapperOuter>
