@@ -5,7 +5,7 @@ import { useState } from 'react';
 function PersonalInfo() {
 const [firstAndLastName, setfirstAndLastName] = useState(JSON.parse(sessionStorage.getItem('FirstAndLastName' ?? '')));
 const [email, setEmail] = useState(JSON.parse(sessionStorage.getItem('email' ?? '')));
-const [companyName, setCompanyName] = useState();
+const [companyName, setCompanyName] = useState(JSON.parse(sessionStorage.getItem('companyName' ?? '')));
 const [companyIndustry, setCompanyIndustry] = useState();
 
 // const [values, setValues] = useState({
@@ -35,6 +35,7 @@ const handleEmailChange = (e) => {
 
 const handleCompanyNameChange = (e) => {
   console.log(companyName)
+  sessionStorage.setItem('companyName', JSON.stringify(companyName));
   setCompanyName(e.target.value)
 }
 
