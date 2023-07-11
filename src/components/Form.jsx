@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Welcome from './Welcome';
 import PersonalInfo from './PersonalInfo';
 import BackgroundInfo from './BackgroundInfo';
@@ -14,28 +14,51 @@ import BrandPersonality from './BrandPersonality';
 import DesignPreferences from './DesignPrefernces';
 import FavoriteWebsites from './FavoriteWebsites';
 import Submit from './Submit';
+import emailjs from '@emailjs/browser';
+import ConfettiExplosion from 'react-confetti-explosion';
+
+
+
 
 
 
 
 
 function Form() {
-<<<<<<< Updated upstream
-
   const [page, setPage] = useState(0);
-=======
-  const [page, setPage] = useState(2);
   const [isExploding, setIsExploding] = useState(false);
->>>>>>> Stashed changes
   const FormTitles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+  const form = useRef();
+  
+  const confettiProps = {
+    force: 0.9,
+    duration: 4000,
+    particleCount: 500,
+    width: 2000, 
+    height: '200vh', 
+  }
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID, 
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
+      form.current, 
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
+      .then((result) => {
+          console.log(result.text);
+          console.log('message sent');
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
 
   const handleIncrementClick = (e) => {
-    // e.preventDefault();
     setPage((currPage) => currPage + 1)
   }
 
   const handleDecrementClick = (e) => {
-    // e.preventDefault();
     setPage((currPage) => currPage - 1)
   }
 
@@ -87,7 +110,7 @@ function Form() {
   }
   
   return (
-    <FormWrapperOuter>
+    <FormWrapperOuter ref={form} onSubmit={sendEmail}>
         <ProgressBarContainer>
           <ProgressBar style={{width: `${page * 8}%`}}></ProgressBar>
         </ProgressBarContainer>
@@ -95,18 +118,13 @@ function Form() {
         <Body>{pageDisplay()}</Body>
         <ButtonContainer>
             { page > 0 && <PrevButton disabled={page === 0} type="button" onClick={handleDecrementClick}><i className="fa-solid fa-arrow-left-long"></i></PrevButton>}
-<<<<<<< Updated upstream
-            <NextButton  disabled={page === FormTitles.length - 1} type="button" onClick={handleIncrementClick}>{page > 0 ? <p>Next</p> : <p>Let's go!</p>}<i className="fa-solid fa-arrow-right-long"></i></NextButton>
-=======
             {page < FormTitles.length - 1 && <NextButton  disabled={page === FormTitles.length - 1} type="button" onClick={handleIncrementClick}>{page > 0 ? <p>Next</p> : <p>Let's go!</p>}<i className="fa-solid fa-arrow-right-long"></i></NextButton>}
             <SubmitBtn type="submit" onClick={() => setIsExploding(!isExploding)}><p>Submit</p><i class="fa-solid fa-paper-plane"></i></SubmitBtn>
             {/* {page === FormTitles.length - 1 && <SubmitBtn type="submit" onClick={() => setIsExploding(!isExploding)}><p>Submit</p><i class="fa-solid fa-paper-plane"></i></SubmitBtn>} */}
             {isExploding && <ConfettiExplosion {...confettiProps}/>}
->>>>>>> Stashed changes
         </ButtonContainer>
         </FormWrapperInner>
     </FormWrapperOuter>
-    // <Footer></Footer>
   )
 }
 
@@ -136,8 +154,6 @@ const FormWrapperInner = styled.div`
 
 `;
 
-
-
 const Body = styled.main`
     display: flex;
     flex-direction: column;
@@ -162,18 +178,17 @@ const PrevButton = styled.button`
     font-size: 1rem;
     cursor: pointer;
 
-    i {
+    @supports (background-clip: text) {
+       i {
         background: linear-gradient( to right, #FDB456, #DD7A78, #BA3D9C);
         background-clip: text;
         color: transparent;
+      }
     }
-     
 
- 
-   
-    
-    
-  
+    i {
+      color: #BA3D9C;
+    }
 `;
 
 const NextButton = styled.button`
@@ -184,9 +199,22 @@ const NextButton = styled.button`
     font-size: 1rem;
     margin-top: 3rem;
     display: flex;
-    /* justify-content: space-around; */
     align-items: center;
-    cursor: pointer;
+    cursor: pointer; 
+    
+    @supports (background-clip: text) {
+      p {
+        background: linear-gradient( to right, #FDB456, #DD7A78, #BA3D9C);
+        background-clip: text;
+        color: transparent;
+      }
+      
+      i {
+        background: linear-gradient( to right, #FDB456, #DD7A78, #BA3D9C);
+        background-clip: text;
+        color: transparent;
+      }
+    }
 
     p {
       color: #BA3D9C;
@@ -197,21 +225,13 @@ const NextButton = styled.button`
       margin-right: 1rem;
      }
 
-    @supports (background-clip: text) {
-      p {
-        background: linear-gradient( to right, #FDB456, #DD7A78, #BA3D9C);
-        background-clip: text;
-        color: transparent;
-      }
-    }
-
-    i {
-        background: linear-gradient( to right, #FDB456, #DD7A78, #BA3D9C);
-        background-clip: text;
-        color: transparent;
-    }
+     i {
+      color: #BA3D9C;
+     }
 `;
 
+const SubmitBtn = styled(NextButton)`
 
+`
 
 export default Form

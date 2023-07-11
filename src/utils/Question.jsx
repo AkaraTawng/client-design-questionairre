@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export default function Question({children}) {
+export default function Question({children, id}) {
   return (
-    <QuestionText>{children}</QuestionText>
+    <QuestionText id={id}>{children}</QuestionText>
   )
 }  
 
@@ -16,5 +16,9 @@ const QuestionText = styled.p`
     margin-top: 7rem;
   }
 
+  &#submit-message {
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+  }
 `;
 
