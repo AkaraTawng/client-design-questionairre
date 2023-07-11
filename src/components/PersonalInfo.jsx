@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { useState } from 'react';
 
 function PersonalInfo() {
-const [firstAndLastName, setfirstAndLastName] = useState(JSON.parse(localStorage.getItem('FirstAndLastName' ?? '')));
+const [firstAndLastName, setfirstAndLastName] = useState(JSON.parse(sessionStorage.getItem('FirstAndLastName' ?? '')));
 const [email, setEmail] = useState();
 const [companyName, setCompanyName] = useState();
 const [companyIndustry, setCompanyIndustry] = useState();
@@ -23,7 +23,7 @@ const [companyIndustry, setCompanyIndustry] = useState();
 //   }
 const handleNameChange = (e) => {
   console.log(firstAndLastName)
-  localStorage.setItem('FirstAndLastName', JSON.stringify(firstAndLastName))
+  sessionStorage.setItem('FirstAndLastName', JSON.stringify(firstAndLastName))
   setfirstAndLastName(e.target.value)
 }
 
