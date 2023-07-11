@@ -120,7 +120,6 @@ function Form() {
             { page > 0 && <PrevButton disabled={page === 0} type="button" onClick={handleDecrementClick}><i className="fa-solid fa-arrow-left-long"></i></PrevButton>}
             {page < FormTitles.length - 1 && <NextButton  disabled={page === FormTitles.length - 1} type="button" onClick={handleIncrementClick}>{page > 0 ? <p>Next</p> : <p>Let's go!</p>}<i className="fa-solid fa-arrow-right-long"></i></NextButton>}
             <SubmitBtn type="submit" onClick={() => setIsExploding(!isExploding)}><p>Submit</p><i class="fa-solid fa-paper-plane"></i></SubmitBtn>
-            {/* {page === FormTitles.length - 1 && <SubmitBtn type="submit" onClick={() => setIsExploding(!isExploding)}><p>Submit</p><i class="fa-solid fa-paper-plane"></i></SubmitBtn>} */}
             {isExploding && <ConfettiExplosion {...confettiProps}/>}
         </ButtonContainer>
         </FormWrapperInner>
@@ -202,19 +201,7 @@ const NextButton = styled.button`
     align-items: center;
     cursor: pointer; 
     
-    @supports (background-clip: text) {
-      p {
-        background: linear-gradient( to right, #FDB456, #DD7A78, #BA3D9C);
-        background-clip: text;
-        color: transparent;
-      }
-      
-      i {
-        background: linear-gradient( to right, #FDB456, #DD7A78, #BA3D9C);
-        background-clip: text;
-        color: transparent;
-      }
-    }
+    
 
     p {
       color: #BA3D9C;
@@ -228,6 +215,20 @@ const NextButton = styled.button`
      i {
       color: #BA3D9C;
      }
+     
+     @supports (background-clip: text) {
+      p {
+        background: linear-gradient( to right, #FDB456, #DD7A78, #BA3D9C);
+        background-clip: text;
+        color: transparent;
+      }
+      
+      i {
+        background: linear-gradient( to right, #FDB456, #DD7A78, #BA3D9C);
+        background-clip: text;
+        color: transparent;
+      }
+    }
 `;
 
 const SubmitBtn = styled(NextButton)`
