@@ -1,20 +1,41 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components"
+import { useRef } from "react";
 
 
 
 function RadioButton({id, value, name, children}) {
-  const [radioState, setRadioState] = useState(value);
-  console.log(radioState, name)
+  // const [radioState, setRadioState] = useState('');
+  const [radioState, setRadioState] = useState(localStorage.getItem(name) ?? '');
+  const inputRef = useRef(null);
 
   useEffect(() => {
-    sessionStorage.setItem(name, JSON.stringify(radioState));
-    // sessionStorage.clear();
-  }, [value]);
+    localStorage.setItem(name, JSON.stringify(radioState));
+    if (inputRef.current) {
+      inputRef.current.checked = radioState === value;
+    }
+  }, [radioState]);
+
+  useEffect(() => {
+    const storedValue = localStorage.getItem(name);
+    setRadioState(storedValue ?? value)
+  }, []);
+
+  const handleChange = (e) => {
+    const newValue = e.target.value;
+    setRadioState(newValue)
+  }
+ 
+
+console.log(inputRef)
 
   return (<>
     <SelectionContainer>
-        <Input type='radio'  id={id} value={value}  name={name} onChange={(e) => setRadioState(e.target.value)}/>
+        <Input 
+        ref={inputRef}
+        type='radio'  id={id} 
+        value={value}  name={name} 
+        onChange={(e) => handleChange(e)}/>
         <Label htmlForfor={id}>
             {children}
         </Label>
