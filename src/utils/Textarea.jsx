@@ -1,8 +1,16 @@
 import styled from 'styled-components';
+import { useState } from 'react';
 
-function Textarea() {
+function Textarea(name) {
+  const [value, setValue] = useState('');
+
+  const handleChange = (e) => {
+    sessionStorage.setItem(name, JSON.stringify(e.target.value));
+    setValue(e.target.value);
+  }
+  console.log(value)
   return (
-    <TextareaInput></TextareaInput>
+    <TextareaInput value={value} onChange={handleChange}></TextareaInput>
   )
 }
 
