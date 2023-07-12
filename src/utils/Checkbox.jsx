@@ -6,13 +6,18 @@ import { useState } from "react";
 function Checkbox({id, name, value, children, placeholder}) {
     const [checked, setChecked] = useState(false);
 
-    const displayOtherTextareaInput = (event) => {
-      setChecked(event.target.checked)
+   
+     const displayOtherTextareaInput = (e) => {
+      setChecked(e.target.checked)
     } 
+
+    const handleChange = (e) => {
+     displayOtherTextareaInput(e);
+    }
 
     return ( <>
         <CheckboxContainer>
-            <Input type="checkbox" id={id} name={name} value={value} onChange={displayOtherTextareaInput}/>
+            <Input type="checkbox" id={id} name={name} value={value} onChange={handleChange}/>
             <Label for={id}>
                 {children}
             </Label>
