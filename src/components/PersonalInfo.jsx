@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function PersonalInfo() {
 const [firstAndLastName, setfirstAndLastName] = useState(JSON.parse(sessionStorage.getItem('FirstAndLastName' ?? '')));
@@ -22,26 +22,28 @@ const [companyIndustry, setCompanyIndustry] = useState(JSON.parse(sessionStorage
 //     setValues({...values, [name]: e.target.value})
 //   }
 const handleNameChange = (e) => {
-  console.log(firstAndLastName)
-  sessionStorage.setItem('FirstAndLastName', JSON.stringify(firstAndLastName))
+  // console.log(firstAndLastName)
+  sessionStorage.setItem('FirstAndLastName', JSON.stringify(e.target.value));
   setfirstAndLastName(e.target.value)
+  
 }
 
+
 const handleEmailChange = (e) => {
-  console.log(email)
-  sessionStorage.setItem('email', JSON.stringify(email));
+  // console.log(email)
+  sessionStorage.setItem('email', JSON.stringify(e.target.value));
   setEmail(e.target.value)
 }
 
 const handleCompanyNameChange = (e) => {
-  console.log(companyName)
-  sessionStorage.setItem('companyName', JSON.stringify(companyName));
+  // console.log(companyName)
+  sessionStorage.setItem('companyName', JSON.stringify(e.target.value));
   setCompanyName(e.target.value)
 }
 
 const handleCompanyIndustryChange = (e) => {
-  console.log(companyIndustry)
-  sessionStorage.setItem('companyIndustry', JSON.stringify(companyIndustry));
+  // console.log(companyIndustry)
+  sessionStorage.setItem('companyIndustry', JSON.stringify(e.target.value));
   setCompanyIndustry(e.target.value)
 }
 
