@@ -9,15 +9,15 @@ const [companyName, setCompanyName] = useState(JSON.parse(sessionStorage.getItem
 const [companyIndustry, setCompanyIndustry] = useState(JSON.parse(sessionStorage.getItem('companyIndustry' ?? '')));
 
 // const [values, setValues] = useState({
-//   firstAndLastName: '',
-//   email: '',
+//   firstAndLastName: JSON.parse(sessionStorage.getItem('firstAndLastName' ?? ''),
+//   email: ,
 //   companyName: '', 
 //   companyIndustry: ''
 // });
 // console.log(values)
-// const getHandler = (name, e) => {
+// const handleChange = (name, e) => {
 //   console.log(name)
-//   localStorage.setItem(name, e.target.value)
+//   sessionStorage.setItem(name, e.target.value)
 //   return (e) => {
 //     setValues({...values, [name]: e.target.value})
 //   }
@@ -25,9 +25,7 @@ const handleNameChange = (e) => {
   // console.log(firstAndLastName)
   sessionStorage.setItem('FirstAndLastName', JSON.stringify(e.target.value));
   setfirstAndLastName(e.target.value)
-  
 }
-
 
 const handleEmailChange = (e) => {
   // console.log(email)
