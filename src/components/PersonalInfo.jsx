@@ -1,23 +1,89 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useState, useEffect } from 'react';
 
 function PersonalInfo() {
+const [firstAndLastName, setfirstAndLastName] = useState(JSON.parse(sessionStorage.getItem('FirstAndLastName' ?? '')));
+const [email, setEmail] = useState(JSON.parse(sessionStorage.getItem('email' ?? '')));
+const [companyName, setCompanyName] = useState(JSON.parse(sessionStorage.getItem('companyName' ?? '')));
+const [companyIndustry, setCompanyIndustry] = useState(JSON.parse(sessionStorage.getItem('companyIndustry' ?? '')));
+
+// const [values, setValues] = useState({
+//   firstAndLastName: '',
+//   email: '',
+//   companyName: '', 
+//   companyIndustry: ''
+// });
+// console.log(values)
+// const getHandler = (name, e) => {
+//   console.log(name)
+//   localStorage.setItem(name, e.target.value)
+//   return (e) => {
+//     setValues({...values, [name]: e.target.value})
+//   }
+const handleNameChange = (e) => {
+  // console.log(firstAndLastName)
+  sessionStorage.setItem('FirstAndLastName', JSON.stringify(e.target.value));
+  setfirstAndLastName(e.target.value)
+  
+}
+
+
+const handleEmailChange = (e) => {
+  // console.log(email)
+  sessionStorage.setItem('email', JSON.stringify(e.target.value));
+  setEmail(e.target.value)
+}
+
+const handleCompanyNameChange = (e) => {
+  // console.log(companyName)
+  sessionStorage.setItem('companyName', JSON.stringify(e.target.value));
+  setCompanyName(e.target.value)
+}
+
+const handleCompanyIndustryChange = (e) => {
+  // console.log(companyIndustry)
+  sessionStorage.setItem('companyIndustry', JSON.stringify(e.target.value));
+  setCompanyIndustry(e.target.value)
+}
+
+
   return (
     <PersonalInfoContainer>
       <InputContainer>
-        <Input name="user_name" type='text' placeholder=''/>
+        <Input 
+        name="user_name" 
+        type='text' 
+        value={firstAndLastName} 
+        onChange={handleNameChange} 
+        placeholder=''/>
         <Label>First and Last Name</Label>
       </InputContainer>
       <InputContainer>
-        <Input  name='user_email' type='email' placeholder=''/>
+        <Input  
+        name='user_email' 
+        type='email' 
+        value={email} 
+        onChange={handleEmailChange} 
+        placeholder=''/>
         <Label>Email</Label>
       </InputContainer>
       <InputContainer>
-        <Input name='user_companyName' type='text' placeholder=''/>
+        <Input 
+        name='user_companyName' 
+        type='text' 
+        value={companyName} 
+        onChange={handleCompanyNameChange} 
+        placeholder=''/>
         <Label>Company Name</Label>
       </InputContainer>
       <InputContainer>
-        <Input name='user_companyIndustry' type='text' placeholder=''/>
+        <Input 
+        name='user_companyIndustry' 
+        type='text' 
+        value={companyIndustry} 
+        onChange={handleCompanyIndustryChange} 
+        placeholder=''/>
         <Label>Company Industry</Label>
       </InputContainer>
     </PersonalInfoContainer>
