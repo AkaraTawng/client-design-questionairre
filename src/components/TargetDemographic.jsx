@@ -1,8 +1,11 @@
-import React from 'react'
+import Question from "../utils/Question"
+import Textarea from "../utils/Textarea"
 
 function TargetDemographic() {
-  return (
-    <div>TargetDemographic</div>
+  return (<>
+      <Question>What is your target demographic?</Question>
+      <Textarea placeholder={'Please explain.'} name='user_targetDemographic'></Textarea>
+    </>
   )
 }
 

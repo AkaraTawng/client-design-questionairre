@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { useState } from 'react';
 
-function Textarea(name) {
-  const [value, setValue] = useState('');
+function Textarea({placeholder, name, id}) {
+  const [value, setValue] = useState(JSON.parse(sessionStorage.getItem(name)));
 
   const handleChange = (e) => {
     sessionStorage.setItem(name, JSON.stringify(e.target.value));
@@ -10,14 +10,17 @@ function Textarea(name) {
   }
   console.log(value)
   return (
-    <TextareaInput value={value} onChange={handleChange}></TextareaInput>
-  )
-}
+    <TextareaInput value={value} id={id} placeholder={placeholder} name={name}  onChange={handleChange}></TextareaInput>
+)}
 
 
 const TextareaInput = styled.textarea`
 width: 70%;
 height: 8rem;
+
+&#favsites {
+  height: 12rem;
+}
 padding: 1rem;
 border-radius: 20px;
 border: none;
