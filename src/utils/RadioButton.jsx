@@ -6,18 +6,18 @@ import { useRef } from "react";
 
 function RadioButton({id, value, name, children}) {
   // const [radioState, setRadioState] = useState('');
-  const [radioState, setRadioState] = useState(localStorage.getItem(name) ?? '');
+  const [radioState, setRadioState] = useState(sessionStorage.getItem(name) ?? '');
   const inputRef = useRef(null);
 
   useEffect(() => {
-    localStorage.setItem(name, JSON.stringify(radioState));
+    sessionStorage.setItem(name, JSON.stringify(radioState));
     if (inputRef.current) {
       inputRef.current.checked = radioState === value;
     }
   }, [radioState]);
 
   useEffect(() => {
-    const storedValue = localStorage.getItem(name);
+    const storedValue = sessionStorage.getItem(name);
     setRadioState(storedValue ?? value)
   }, []);
 

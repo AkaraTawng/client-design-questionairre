@@ -5,19 +5,40 @@ import { useState } from "react";
 
 function Checkbox({id, name, value, children, placeholder}) {
     const [checked, setChecked] = useState(false);
-
+    const [checkboxVal, setCheckboxVal] = useState([]);
+    
    
      const displayOtherTextareaInput = (e) => {
       setChecked(e.target.checked)
-    } 
+    }   
+    
+    const handleCheck = (e) => {
+      if(e.target.checked === true){
+        if(checkboxVal.includes(e.target.value)){
+        console.log('item already added')
+        return;
+    }
+        let updatedCheckboxVal = [...checkboxVal, e.target.value]; 
+        
+        setCheckboxVal(updatedCheckboxVal)
+      }
+    
+    // let updatedCheckboxVal = checkboxVal.concat(e.target.value);
+    // if(checkboxVal.includes(e.target.value)){
+    //   updatedCheckboxVal = updatedCheckboxVal.filter(item => item !== e.target.value)
+    // }
+    
+   
+  };
 
     const handleChange = (e) => {
-     displayOtherTextareaInput(e);
+      displayOtherTextareaInput(e);
+      handleCheck(e);
     }
-
+    console.log(checkboxVal)
     return ( <>
         <CheckboxContainer>
-            <Input type="checkbox" id={id} name={name} value={value} onChange={handleChange}/>
+            <Input type="checkbox" id={id} name={name} value={value} onChange={e => handleChange(e)}/>
             <Label for={id}>
                 {children}
             </Label>
