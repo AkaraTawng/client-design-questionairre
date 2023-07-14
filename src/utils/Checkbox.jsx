@@ -13,7 +13,7 @@ function Checkbox({id, name, value, children, placeholder}) {
     }   
     
     const handleCheck = (e) => {
-      if(e.target.checked === true){
+      if(e.target.checked){
         if(checkboxVal.includes(e.target.value)){
         console.log('item already added')
         return;
@@ -21,7 +21,10 @@ function Checkbox({id, name, value, children, placeholder}) {
         let updatedCheckboxVal = [...checkboxVal, e.target.value]; 
         
         setCheckboxVal(updatedCheckboxVal)
+      } else {
+        setCheckboxVal(checkboxVal.filter(item => item !== e.target.value));
       }
+  
     
     // let updatedCheckboxVal = checkboxVal.concat(e.target.value);
     // if(checkboxVal.includes(e.target.value)){
