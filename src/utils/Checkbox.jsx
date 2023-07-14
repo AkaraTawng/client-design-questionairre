@@ -3,52 +3,18 @@ import Textarea from "./Textarea";
 import { useState } from "react";
 
 
-function Checkbox({id, name, value, children, placeholder}) {
-    const [checked, setChecked] = useState(false);
-    const [checkboxVal, setCheckboxVal] = useState([]);
-    
-   
-     const displayOtherTextareaInput = (e) => {
-      setChecked(e.target.checked)
-    }   
-    
-    const handleCheck = (e) => {
-      if(e.target.checked){
-        if(checkboxVal.includes(e.target.value)){
-        console.log('item already added')
-        return;
-    }
-        let updatedCheckboxVal = [...checkboxVal, e.target.value]; 
-        
-        setCheckboxVal(updatedCheckboxVal)
-      } else {
-        setCheckboxVal(checkboxVal.filter(item => item !== e.target.value));
-      }
-  
-    
-    // let updatedCheckboxVal = checkboxVal.concat(e.target.value);
-    // if(checkboxVal.includes(e.target.value)){
-    //   updatedCheckboxVal = updatedCheckboxVal.filter(item => item !== e.target.value)
-    // }
-    
-   
-  };
-
-    const handleChange = (e) => {
-      displayOtherTextareaInput(e);
-      handleCheck(e);
-    }
-    console.log(checkboxVal)
+function Checkbox({ isChecked, label, checkHandler, index }) {
+  // console.log({ isChecked })
     return ( <>
         <CheckboxContainer>
-            <Input type="checkbox" id={id} name={name} value={value} onChange={e => handleChange(e)}/>
-            <Label for={id}>
-                {children}
-            </Label>
+        <Input
+        type="checkbox"
+        id={`checkbox-${index}`}
+        checked={isChecked}
+        onChange={checkHandler}
+      />
+      <Label htmlFor={`checkbox-${index}`}>{label}</Label>
         </CheckboxContainer>  
-        {id === 'other' && checked &&
-                    <Textarea placeholder={placeholder} name={name}></Textarea>
-            }
   </>)
 }
 

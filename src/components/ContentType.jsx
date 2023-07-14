@@ -1,27 +1,45 @@
 import Question from "../utils/Question"
 import Checkbox from "../utils/Checkbox"
+import { useState } from "react";
+
+const allToppings = [
+  { name: "Golden Corn", checked: false },
+  { name: "Paneer", checked: false },
+  { name: "Tomato", checked: false },
+  { name: "Mushroom", checked: false },
+  { name: "Onion", checked: false },
+  { name: "Black Olives", checked: false },
+]
 
 function ContentType() {
+  const [toppings, setToppings] = useState(allToppings)
+
+  const updateCheckStatus = index => {
+    setToppings(
+      toppings.map((topping, currentIndex) =>
+        currentIndex === index
+          ? { ...topping, checked: !topping.checked }
+          : topping
+      )
+    )}
+
+    
+ console.log(toppings)
+
+  
   return (<>
     <Question>What kind of content do you plan to publish on your website? Select all that apply. </Question>
-    <Checkbox id='picture' name='user_contentType' value='picture'>
-      Pictures
-    </Checkbox>
-    <Checkbox id='video' name='user_contentType' value='video'>
-      Videos
-    </Checkbox>
-    <Checkbox id='music-files' name='user_contentType' value='music files'>
-      Music files
-    </Checkbox>
-    <Checkbox id='blog-posts' name='user_contentType' value='blog posts'>
-      Blog posts
-    </Checkbox>
-    <Checkbox id='product-listings' name='user_contentType' value='product listings'>
-      Product listings
-    </Checkbox>
-    <Checkbox id='other' name='user_contentType' value='other' placeholder='Please explain.'>
-      Other
-    </Checkbox>
+    
+    {toppings.map((topping, index) => (
+        <Checkbox
+          key={topping.name}
+          isChecked={topping.checked}
+          checkHandler={() => updateCheckStatus(index)}
+          label={topping.name}
+          index={index}
+        />
+      ))}
+
   </>)
 }
 
