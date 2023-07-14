@@ -4,7 +4,6 @@ import { useState } from "react";
 
 
 function Checkbox({ isChecked, label, checkHandler, index }) {
-  // console.log({ isChecked })
     return ( <>
         <CheckboxContainer>
         <Input
