@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import Textarea from "./Textarea";
-import { useState } from "react";
 
 
 function Checkbox({ isChecked, label, checkHandler, index }) {
@@ -13,7 +12,8 @@ function Checkbox({ isChecked, label, checkHandler, index }) {
         onChange={checkHandler}
       />
       <Label htmlFor={`checkbox-${index}`}>{label}</Label>
-        </CheckboxContainer>  
+        </CheckboxContainer>   
+        {label === 'Other' && isChecked ? <Textarea/> : null}
   </>)
 }
 
