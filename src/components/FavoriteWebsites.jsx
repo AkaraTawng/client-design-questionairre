@@ -10,10 +10,10 @@ function FavoriteWebsites() {
       websitelink1@example.com
       like 1, like 2, like 3, ...
 
-      websitelink1@example.com
+      websitelink2@example.com
       like 1, like 2, like 3, ...
 
-      websitelink1@example.com
+      websitelink3@example.com
       like 1, like 2, like 3, ...
     '></Textarea>
 
