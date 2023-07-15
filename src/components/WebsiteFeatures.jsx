@@ -12,6 +12,16 @@ const allFeatures = [
 function WebsiteFeatures() {
   const [websiteFeatures, setWebsiteFeatures] = useState(JSON.parse(sessionsStorage.getItem('websiteFeatures')) ?? allFeatures);
 
+  const updateCheckStatus = index => {
+    setWebsiteFeatures(
+      websiteFeatures.map((websiteFeature, currentIndex) =>
+        currentIndex === index
+          ? { ...websiteFeature, checked: !websiteFeature.checked }
+          : websiteFeature
+      ) 
+    )
+  };
+
 
   return (<>
     <Question>What features do you need on your website? Select all that apply.</Question>
