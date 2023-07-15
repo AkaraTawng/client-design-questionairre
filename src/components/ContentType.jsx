@@ -1,6 +1,6 @@
 import Question from "../utils/Question"
 import Checkbox from "../utils/Checkbox"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const allContentTypes = [
   { name: "Pictures", checked: false },
@@ -12,7 +12,7 @@ const allContentTypes = [
 ]
 
 function ContentType() {
-  const [contentTypes, setContentTypes] = useState(allContentTypes)
+  const [contentTypes, setContentTypes] = useState(JSON.parse(sessionStorage.getItem('contentTypes')) ?? allContentTypes);
 
   const updateCheckStatus = index => {
     setContentTypes(
@@ -20,10 +20,14 @@ function ContentType() {
         currentIndex === index
           ? { ...contentType, checked: !contentType.checked }
           : contentType
-      )
-    )}
+      ) 
+    )
+  }
 
-    
+  useEffect(() => {
+      sessionStorage.setItem('contentTypes', JSON.stringify(contentTypes))
+  }, [contentTypes])
+
  console.log(contentTypes)
 
   
