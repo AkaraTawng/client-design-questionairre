@@ -1,6 +1,13 @@
 import Checkbox from '../utils/Checkbox'
 import Question from '../utils/Question'
+import { useState, useEffect } from "react";
 
+const allFeatures = [
+  {name: 'Payment Portal', checked: false},
+  {name: 'Appointment Scheduling', checked: false},
+  {name: 'Contact Form', checked: false},
+  {name: 'Other', checked: false},
+];
 
 function WebsiteFeatures() {
   return (<>
