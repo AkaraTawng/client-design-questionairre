@@ -22,6 +22,10 @@ function WebsiteFeatures() {
     )
   };
 
+  useEffect(() => {
+    sessionStorage.setItem('websiteFeatures', JSON.stringify(websiteFeatures))
+}, [websiteFeatures])
+
 
   return (<>
     <Question>What features do you need on your website? Select all that apply.</Question>
