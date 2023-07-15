@@ -10,6 +10,9 @@ const allFeatures = [
 ];
 
 function WebsiteFeatures() {
+  const [websiteFeatures, setWebsiteFeatures] = useState(JSON.parse(sessionsStorage.getItem('websiteFeatures')) ?? allFeatures);
+
+
   return (<>
     <Question>What features do you need on your website? Select all that apply.</Question>
     <Checkbox id='payment-portal' name='user_siteFeatures' value='Payment portal'>
