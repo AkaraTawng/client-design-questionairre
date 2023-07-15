@@ -28,7 +28,7 @@ function ContentType() {
       sessionStorage.setItem('contentTypes', JSON.stringify(contentTypes))
   }, [contentTypes])
 
- console.log(contentTypes)
+//  console.log(contentTypes)
 
   
   return (<>
