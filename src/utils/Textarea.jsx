@@ -10,7 +10,7 @@ function Textarea({placeholder, name, id}) {
   }
   console.log(value)
   return (
-    <TextareaInput value={value} id={id} placeholder={placeholder} name={name}  onChange={handleChange}></TextareaInput>
+    <TextareaInput value={value ?? ''} id={id} placeholder={placeholder} name={name}  onChange={handleChange}></TextareaInput>
 )}
 
 

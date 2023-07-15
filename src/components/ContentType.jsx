@@ -1,27 +1,49 @@
 import Question from "../utils/Question"
 import Checkbox from "../utils/Checkbox"
+import { useState, useEffect } from "react";
+
+const allContentTypes = [
+  { name: "Pictures", checked: false },
+  { name: "Videos", checked: false },
+  { name: "Music files", checked: false },
+  { name: "Blog posts", checked: false },
+  { name: "Product listings", checked: false },
+  { name: "Other", checked: false },
+]
 
 function ContentType() {
+  const [contentTypes, setContentTypes] = useState(JSON.parse(sessionStorage.getItem('contentTypes')) ?? allContentTypes);
+
+  const updateCheckStatus = index => {
+    setContentTypes(
+      contentTypes.map((contentType, currentIndex) =>
+        currentIndex === index
+          ? { ...contentType, checked: !contentType.checked }
+          : contentType
+      ) 
+    )
+  }
+
+  useEffect(() => {
+      sessionStorage.setItem('contentTypes', JSON.stringify(contentTypes))
+  }, [contentTypes])
+
+ console.log(contentTypes)
+
+  
   return (<>
     <Question>What kind of content do you plan to publish on your website? Select all that apply. </Question>
-    <Checkbox id='picture' name='user_contentType' value='picture'>
-      Pictures
-    </Checkbox>
-    <Checkbox id='video' name='user_contentType' value='video'>
-      Videos
-    </Checkbox>
-    <Checkbox id='music-files' name='user_contentType' value='music files'>
-      Music files
-    </Checkbox>
-    <Checkbox id='blog-posts' name='user_contentType' value='blog posts'>
-      Blog posts
-    </Checkbox>
-    <Checkbox id='product-listings' name='user_contentType' value='product listings'>
-      Product listings
-    </Checkbox>
-    <Checkbox id='other' name='user_contentType' value='other' placeholder='Please explain.'>
-      Other
-    </Checkbox>
+    
+    {contentTypes.map((contentType, index) => (
+        <Checkbox
+          key={contentType.name}
+          isChecked={contentType.checked}
+          checkHandler={() => updateCheckStatus(index)}
+          label={contentType.name}
+          index={index}
+        />
+      ))}
+
   </>)
 }
 
