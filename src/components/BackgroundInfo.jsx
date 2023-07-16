@@ -4,12 +4,72 @@ import QuestionText from '../utils/Question';
 import RadioButton from '../utils/RadioButton';
 import { useState } from 'react';
 
-function BackgroundInfo() {
-  
-  return (<>
-    <QuestionText>Do you have content ready for your site?</QuestionText>
 
-    <RadioButton id='yes-content' value='Yes' name='user_contentReady'>
+function BackgroundInfo() {
+  const [contentReady, setContentReady] = useState('Yes');
+  const [companyRegistered, setCompanyRegistered] = useState('Yes');
+  
+
+  const handleContentReadyChange = (e) => {
+    setContentReady(e.target.value)
+  }
+
+  const handleCompanyRegisteredChange = (e) => {
+    setCompanyRegistered(e.target.value);
+  }
+  
+    return (<>
+    <QuestionText>Do you have content ready for your site?</QuestionText>
+    <SelectionContainer>
+      <Input
+        type="radio"
+        name="user_contentReady"
+        value="Yes"
+        id="yes-content"
+        checked={contentReady === "Yes"}
+        onChange={handleContentReadyChange}
+      />
+      <Label htmlFor="yes-content">Yes</Label>
+    </SelectionContainer>
+    <SelectionContainer>
+      <Input
+        type="radio"
+        name="user_contentReady"
+        value="No"
+        id="no-content"
+        checked={contentReady === "No"}
+        onChange={handleContentReadyChange}
+      />
+      <Label htmlFor="no-content">No</Label>
+    </SelectionContainer>
+
+    <QuestionText>Is your company legally registered?</QuestionText>
+    <SelectionContainer>
+      <Input
+        type="radio"
+        name="user_companyRegistered"
+        value="Yes"
+        id="yes-registered"
+        checked={companyRegistered === "Yes"}
+        onChange={handleCompanyRegisteredChange}
+      />
+      <Label htmlFor="yes-companyRegistered">Yes</Label>
+    </SelectionContainer>
+    <SelectionContainer>
+      <Input
+        type="radio"
+        name="user_companyRegistered"
+        value="No"
+        id="no-companyRegistered"
+        checked={companyRegistered === "No"}
+        onChange={handleCompanyRegisteredChange}
+      />
+      <Label htmlFor="no-companyRegistered">No</Label>
+    </SelectionContainer>
+     
+     
+
+    {/* <RadioButton id='yes-content' value='Yes' name='user_contentReady'>
       Yes, I have content ready.
     </RadioButton>
   
@@ -30,9 +90,28 @@ function BackgroundInfo() {
    
     <RadioButton id='not-yet' value='Not yet' name='user_companyRegistered'>
       I'm in the process of registering it.
-    </RadioButton>
+    </RadioButton> */}
     </>
   )
 }
+
+const Input = styled.input`
+  margin-right: 1rem;
+  height: 1.1rem;
+  width: 1.1rem;
+  accent-color: grey;
+`;
+
+const Label = styled.label`
+  color: white;
+`;
+
+const SelectionContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 80%;
+  height: 5rem;
+`;
 
 export default BackgroundInfo

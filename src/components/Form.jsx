@@ -177,6 +177,10 @@ const PrevButton = styled.button`
     font-size: 1rem;
     cursor: pointer;
 
+    i {
+      color: #BA3D9C;
+    }
+    
     @supports (background-clip: text) {
        i {
         background: linear-gradient( to right, #FDB456, #DD7A78, #BA3D9C);
@@ -185,9 +189,6 @@ const PrevButton = styled.button`
       }
     }
 
-    i {
-      color: #BA3D9C;
-    }
 `;
 
 const NextButton = styled.button`
