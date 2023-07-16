@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import QuestionText from '../utils/Question';
 import RadioButton from '../utils/RadioButton';
@@ -6,13 +6,17 @@ import { useState } from 'react';
 
 
 function BackgroundInfo() {
-  const [contentReady, setContentReady] = useState('Yes');
+  const [contentReady, setContentReady] = useState(JSON.parse(sessionStorage.getItem('user_contentReady')) ?? 'Yes');
   const [companyRegistered, setCompanyRegistered] = useState('Yes');
   
 
   const handleContentReadyChange = (e) => {
     setContentReady(e.target.value)
   }
+
+  useEffect(() => {
+    sessionStorage.setItem('user_contentReady', JSON.stringify(contentReady));
+  }, [contentReady])
 
   const handleCompanyRegisteredChange = (e) => {
     setCompanyRegistered(e.target.value);
