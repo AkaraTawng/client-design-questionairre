@@ -11,7 +11,7 @@ import WebsiteFeatures from './WebsiteFeatures';
 import UniqueQualities from './UniqueQualities';
 import TargetDemographic from './TargetDemographic'
 import BrandPersonality from './BrandPersonality';
-import DesignPreferences from './DesignPrefernces';
+import DesignPreferences from './DesignPreferences';
 import FavoriteWebsites from './FavoriteWebsites';
 import Submit from './Submit';
 import emailjs from '@emailjs/browser';
@@ -177,6 +177,10 @@ const PrevButton = styled.button`
     font-size: 1rem;
     cursor: pointer;
 
+    i {
+      color: #BA3D9C;
+    }
+    
     @supports (background-clip: text) {
        i {
         background: linear-gradient( to right, #FDB456, #DD7A78, #BA3D9C);
@@ -185,9 +189,6 @@ const PrevButton = styled.button`
       }
     }
 
-    i {
-      color: #BA3D9C;
-    }
 `;
 
 const NextButton = styled.button`
