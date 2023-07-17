@@ -9,7 +9,6 @@ function BackgroundInfo() {
   const [contentReady, setContentReady] = useState(JSON.parse(sessionStorage.getItem('user_contentReady')) ?? 'Yes');
   const [companyRegistered, setCompanyRegistered] = useState(JSON.parse(sessionStorage.getItem('user_companyRegistered')) ?? 'Yes');
   
-
   const handleContentReadyChange = (e) => {
     setContentReady(e.target.value)
   }
