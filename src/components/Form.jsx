@@ -11,7 +11,7 @@ import WebsiteFeatures from './WebsiteFeatures';
 import UniqueQualities from './UniqueQualities';
 import TargetDemographic from './TargetDemographic'
 import BrandPersonality from './BrandPersonality';
-import DesignPreferences from './DesignPrefernces';
+import DesignPreferences from './DesignPreferences';
 import FavoriteWebsites from './FavoriteWebsites';
 import Submit from './Submit';
 import emailjs from '@emailjs/browser';

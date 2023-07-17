@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import RadioButton from "../utils/RadioButton"
 import styled from "styled-components";
 
-function DesignPrefernces() {
+function DesignPreferences() {
   const [designPreferences, setDesignPreferences] = useState(JSON.parse(sessionStorage.getItem('user_designPreferences')) ?? 'Yes');
 
   const handleDesignPreferencesChange = (e) => {
@@ -61,4 +61,4 @@ const SelectionContainer = styled.div`
   height: 5rem;
 `;
 
-export default DesignPrefernces
+export default DesignPreferences
