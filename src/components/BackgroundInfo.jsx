@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 function BackgroundInfo() {
   const [contentReady, setContentReady] = useState(JSON.parse(sessionStorage.getItem('user_contentReady')) ?? 'Yes');
-  const [companyRegistered, setCompanyRegistered] = useState('Yes');
+  const [companyRegistered, setCompanyRegistered] = useState(JSON.parse(sessionStorage.getItem('user_companyRegistered')) ?? 'Yes');
   
 
   const handleContentReadyChange = (e) => {
@@ -21,6 +21,10 @@ function BackgroundInfo() {
   const handleCompanyRegisteredChange = (e) => {
     setCompanyRegistered(e.target.value);
   }
+
+  useEffect(() => {
+    sessionStorage.setItem('user_companyRegistered', JSON.stringify(companyRegistered));
+  }, [companyRegistered])
   
     return (<>
     <QuestionText>Do you have content ready for your site?</QuestionText>
