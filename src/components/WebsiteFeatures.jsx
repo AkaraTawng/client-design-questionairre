@@ -13,6 +13,7 @@ const allFeatures = [
 
 function WebsiteFeatures() {
   const [websiteFeatures, setWebsiteFeatures] = useState(JSON.parse(sessionStorage.getItem('websiteFeatures')) ?? allFeatures);
+  const [otherTextArea, setOtherTextArea] = useState(JSON.parse(sessionStorage.getItem('user_otherWebsiteFeatures')) ?? '');
 
   const updateCheckStatus = index => {
     setWebsiteFeatures(
@@ -28,6 +29,14 @@ function WebsiteFeatures() {
     sessionStorage.setItem('websiteFeatures', JSON.stringify(websiteFeatures))
 }, [websiteFeatures])
 
+const handleOtherTextareaChange = (e) => {
+  setOtherTextArea(e.target.value);
+};
+
+useEffect(() => {
+  sessionStorage.setItem('user_otherWebsiteFeatures', JSON.stringify(otherTextArea));
+}, [otherTextArea])
+
 // console.log(websiteFeatures[3].checked)
 
   return (<>
@@ -42,7 +51,12 @@ function WebsiteFeatures() {
         index={index}
       />
     ))}
-    {websiteFeatures[3].checked === true && <TextareaInput></TextareaInput>}
+    {websiteFeatures[3].checked === true && 
+    <TextareaInput
+      placeholder='Please list all other features.'
+      value={otherTextArea}
+      onChange={handleOtherTextareaChange}
+    ></TextareaInput>}
   </>)
 }
 
