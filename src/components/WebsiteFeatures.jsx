@@ -1,6 +1,8 @@
+import styled from 'styled-components';
 import Checkbox from '../utils/Checkbox'
 import Question from '../utils/Question'
 import { useState, useEffect } from "react";
+
 
 const allFeatures = [
   {name: 'Payment Portal', checked: false},
@@ -11,6 +13,7 @@ const allFeatures = [
 
 function WebsiteFeatures() {
   const [websiteFeatures, setWebsiteFeatures] = useState(JSON.parse(sessionStorage.getItem('websiteFeatures')) ?? allFeatures);
+  const [otherTextArea, setOtherTextArea] = useState(JSON.parse(sessionStorage.getItem('user_otherWebsiteFeatures')) ?? '');
 
   const updateCheckStatus = index => {
     setWebsiteFeatures(
@@ -26,7 +29,16 @@ function WebsiteFeatures() {
     sessionStorage.setItem('websiteFeatures', JSON.stringify(websiteFeatures))
 }, [websiteFeatures])
 
-// console.log(websiteFeatures)
+const handleOtherTextareaChange = (e) => {
+  setOtherTextArea(e.target.value);
+};
+
+useEffect(() => {
+  sessionStorage.setItem('user_otherWebsiteFeatures', JSON.stringify(otherTextArea));
+}, [otherTextArea])
+
+// console.log(websiteFeatures[3].checked)
+
   return (<>
     <Question>What features do you need on your website? Select all that apply.</Question>
 
@@ -39,7 +51,26 @@ function WebsiteFeatures() {
         index={index}
       />
     ))}
+    {websiteFeatures[3].checked === true && 
+    <TextareaInput
+      placeholder='Please list all other features.'
+      value={otherTextArea}
+      onChange={handleOtherTextareaChange}
+    ></TextareaInput>}
   </>)
 }
+
+
+const TextareaInput = styled.textarea`
+width: 70%;
+height: 8rem;
+padding: 1rem;
+border-radius: 20px;
+border: none;
+margin-top: 1.5rem;
+&:focus {
+  border: 2px solid gray;
+}
+`
 
 export default WebsiteFeatures

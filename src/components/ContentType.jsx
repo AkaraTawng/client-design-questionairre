@@ -1,6 +1,7 @@
 import Question from "../utils/Question"
 import Checkbox from "../utils/Checkbox"
 import { useState, useEffect } from "react";
+import styled from "styled-components";
 
 const allContentTypes = [
   { name: "Pictures", checked: false },
@@ -13,6 +14,7 @@ const allContentTypes = [
 
 function ContentType() {
   const [contentTypes, setContentTypes] = useState(JSON.parse(sessionStorage.getItem('contentTypes')) ?? allContentTypes);
+  const [otherTextArea, setOtherTextArea] = useState(JSON.parse(sessionStorage.getItem('user_otherContentTypes')) ?? '');
 
   const updateCheckStatus = index => {
     setContentTypes(
@@ -28,6 +30,14 @@ function ContentType() {
       sessionStorage.setItem('contentTypes', JSON.stringify(contentTypes))
   }, [contentTypes])
 
+  const handleOtherTextareaChange = (e) => {
+    setOtherTextArea(e.target.value);
+  };
+  
+  useEffect(() => {
+    sessionStorage.setItem('user_otherContentTypes', JSON.stringify(otherTextArea));
+  }, [otherTextArea])
+
 //  console.log(contentTypes)
 
   return (<>
@@ -42,8 +52,25 @@ function ContentType() {
           index={index}
         />
       ))}
-
+      {contentTypes[5].checked === true && 
+    <TextareaInput
+      placeholder='Please list all other content types.'
+      value={otherTextArea}
+      onChange={handleOtherTextareaChange}
+    ></TextareaInput>}
   </>)
 }
+
+const TextareaInput = styled.textarea`
+width: 70%;
+height: 8rem;
+padding: 1rem;
+border-radius: 20px;
+border: none;
+margin-top: 1.5rem;
+&:focus {
+  border: 2px solid gray;
+}
+`
 
 export default ContentType
