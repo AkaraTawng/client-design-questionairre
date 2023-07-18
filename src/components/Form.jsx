@@ -50,6 +50,7 @@ function Form() {
       }, (error) => {
           console.log(error.text);
       });
+      sessionStorage.clear();
   };
 
   const handleIncrementClick = (e) => {
