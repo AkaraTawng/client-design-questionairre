@@ -18,10 +18,9 @@ import emailjs from '@emailjs/browser';
 import ConfettiExplosion from 'react-confetti-explosion';
 
 
-
-
-
-
+/**  TODO
+ * Add name attribute to components that use checkboxes
+ * */  
 
 
 function Form() {
@@ -29,7 +28,6 @@ function Form() {
   const [isExploding, setIsExploding] = useState(false);
   const FormTitles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
   const form = useRef();
-  
   const confettiProps = {
     force: 0.9,
     duration: 4000,
@@ -47,7 +45,7 @@ function Form() {
       form.current, 
       import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
       .then((result) => {
-          console.log(result.text);
+          console.log(form.current);
           console.log('message sent');
       }, (error) => {
           console.log(error.text);
@@ -201,8 +199,6 @@ const NextButton = styled.button`
     display: flex;
     align-items: center;
     cursor: pointer; 
-    
-    
 
     p {
       color: #BA3D9C;
@@ -234,6 +230,6 @@ const NextButton = styled.button`
 
 const SubmitBtn = styled(NextButton)`
 
-`
+`;
 
 export default Form
