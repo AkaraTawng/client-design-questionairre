@@ -2,7 +2,7 @@ import styled from "styled-components"
 import Textarea from "./Textarea";
 
 
-function Checkbox({ isChecked, label, checkHandler, index }) {
+function Checkbox({ isChecked, label, checkHandler, index, name, value }) {
     return ( <>
         <CheckboxContainer>
         <Input
@@ -10,6 +10,8 @@ function Checkbox({ isChecked, label, checkHandler, index }) {
         id={`checkbox-${index}`}
         checked={isChecked}
         onChange={checkHandler}
+        name={name}
+        value={value}
       />
       <Label htmlFor={`checkbox-${index}`}>{label}</Label>
         </CheckboxContainer>   

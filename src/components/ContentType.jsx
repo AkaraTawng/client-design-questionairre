@@ -4,12 +4,12 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const allContentTypes = [
-  { name: "Pictures", checked: false },
-  { name: "Videos", checked: false },
-  { name: "Music files", checked: false },
-  { name: "Blog posts", checked: false },
-  { name: "Product listings", checked: false },
-  { name: "Other", checked: false },
+  { label: "Pictures", checked: false },
+  { label: "Videos", checked: false },
+  { label: "Music files", checked: false },
+  { label: "Blog posts", checked: false },
+  { label: "Product listings", checked: false },
+  { label: "Other", checked: false },
 ]
 
 function ContentType() {
@@ -45,17 +45,20 @@ function ContentType() {
     
     {contentTypes.map((contentType, index) => (
         <Checkbox
-          key={contentType.name}
+          key={contentType.label}
           isChecked={contentType.checked}
           checkHandler={() => updateCheckStatus(index)}
-          label={contentType.name}
+          label={contentType.label}
           index={index}
+          name={"user_contentTypes"}
+          value={contentType.label}
         />
       ))}
       {contentTypes[5].checked === true && 
     <TextareaInput
       placeholder='Please list all other content types.'
       value={otherTextArea}
+      name={"user_otherContentTypes"}
       onChange={handleOtherTextareaChange}
     ></TextareaInput>}
   </>)
