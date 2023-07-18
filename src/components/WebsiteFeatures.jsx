@@ -5,10 +5,10 @@ import { useState, useEffect } from "react";
 
 
 const allFeatures = [
-  {name: 'Payment Portal', checked: false},
-  {name: 'Appointment Scheduling', checked: false},
-  {name: 'Contact Form', checked: false},
-  {name: 'Other', checked: false},
+  {label: 'Payment Portal', checked: false},
+  {label: 'Appointment Scheduling', checked: false},
+  {label: 'Contact Form', checked: false},
+  {label: 'Other', checked: false},
 ];
 
 function WebsiteFeatures() {
@@ -44,17 +44,20 @@ useEffect(() => {
 
     {websiteFeatures.map((websiteFeature, index) => (
       <Checkbox
-        key={websiteFeature.name}
+        key={websiteFeature.label}
         isChecked={websiteFeature.checked}
         checkHandler={() => updateCheckStatus(index)}
-        label={websiteFeature.name}
+        label={websiteFeature.label}
         index={index}
+        value={websiteFeature.label}
+        name={"user_websiteFeatures"}
       />
     ))}
     {websiteFeatures[3].checked === true && 
     <TextareaInput
       placeholder='Please list all other features.'
       value={otherTextArea}
+      name={"user_otherWebsiteFeatures"}
       onChange={handleOtherTextareaChange}
     ></TextareaInput>}
   </>)
