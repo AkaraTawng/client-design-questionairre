@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
+useEffect(() => {
+         window.open('https://client-ui-design-questionairre.netlify.app/', '_blank', 'noreferrer');
+    }, [])
 
 const handleCloseTab = () => {
-    useEffect(() => {
-         window.open('https://client-ui-design-questionairre.netlify.app/', '_blank', 'noreferrer');
-    })
+    
     window.close();
 }
 
