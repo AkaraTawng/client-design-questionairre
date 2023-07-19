@@ -1,14 +1,22 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
-const handleCloseTab = () => {
-    window.close();
+
+let openedWindow;
+
+function openWindow() {
+    openedWindow = window.open('https://client-ui-design-questionairre.netlify.app/')
 }
 
 useEffect(() => {
-    window.open("https://client-ui-design-questionairre.netlify.app/", "_self");
-    console.log("open window");
-    }, []);
+    openWindow();
+}, [])
+
+const handleCloseTab = () => {
+    openedWindow.close();
+}
+
+
 
 function Congratulation() {
   return (<>
