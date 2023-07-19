@@ -6,7 +6,7 @@ const handleCloseTab = () => {
 }
 
 useEffect(() => {
-    window.open("https://client-ui-design-questionairre.netlify.app/", "_self", "");
+    window.open("https://client-ui-design-questionairre.netlify.app/", "_self");
     console.log("open window");
     }, []);
 
