@@ -9,6 +9,9 @@ function Congratulation() {
         All your answers have been saved and are on their way to our team now.
     </CongratulationBodyText>
     <CongratulationBodyText>
+         Our team will review your answers and you can expect to hear from us via email within the next few days.
+    </CongratulationBodyText>
+    <CongratulationBodyText>
         You can safely close this tab and enjoy the rest of your day 😁
     </CongratulationBodyText>
   </>)
