@@ -1,30 +1,52 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
+
+const handleCloseTab = () => {
+    window.close();
+}
+
+useEffect(() => {
+    window.open("https://client-ui-design-questionairre.netlify.app/", "_self", "");
+    console.log("open window");
+    }, []);
 
 function Congratulation() {
   return (<>
-    <Header>Congratulations!</Header>
-    <subHeader>You made it!</subHeader>
-    <congratulationBodyText>
+    <Header>Congratulations</Header>
+    <SubHeader>You made it!</SubHeader>
+    <CongratulationBodyText>
         All your answers have been saved and are on their way to our team now.
-    </congratulationBodyText>
-    <congratulationBodyText>
+    </CongratulationBodyText>
+    <CongratulationBodyText>
         You can safely close this tab and enjoy the rest of your day 😁
-    </congratulationBodyText>
+    </CongratulationBodyText>
+
+    <CloseTabBtn onClick={handleCloseTab}>Close Tab</CloseTabBtn>
 
   </>)
 }
 
 const Header = styled.h1`
   color: white;
+  font-size: 2rem;
+  padding-bottom: .5rem;
+  border-bottom: 3px solid white;
 `;
 
-const subHeader = styled.h2`
+const SubHeader = styled.h2`
   color: white;
+  font-size: 2rem;
 `;
 
-const congratulationBodyText = styled.p`
+const CongratulationBodyText = styled.p`
   color: white;
+  text-align: center;
+  width: 83%;
+  line-height: 1.5rem;
+`;
+
+const CloseTabBtn = styled.button`
+    
 `;
 
 export default Congratulation
