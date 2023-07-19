@@ -17,7 +17,7 @@ import styled from 'styled-components';
 
 function Submit() {
   return (<>
-    <Question id='submit-message'>Please click submit and our team will review your answers and get back to you shortly.</Question>
+    <Question id='submit-message'>Please take some time to review your answers and click submit when you're ready.</Question>
 
     <InvisibilityShield>
       <PersonalInfo/>
