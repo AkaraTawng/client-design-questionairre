@@ -1,17 +1,6 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
-useEffect(() => {
-         window.open('https://client-ui-design-questionairre.netlify.app/', '_blank', 'noreferrer');
-    }, [])
-
-const handleCloseTab = () => {
-    
-    window.close();
-}
-
-
-
 function Congratulation() {
   return (<>
     <Header>Congratulations</Header>
@@ -22,9 +11,6 @@ function Congratulation() {
     <CongratulationBodyText>
         You can safely close this tab and enjoy the rest of your day 😁
     </CongratulationBodyText>
-
-    <CloseTabBtn onClick={handleCloseTab}>Close Tab</CloseTabBtn>
-
   </>)
 }
 
@@ -45,10 +31,6 @@ const CongratulationBodyText = styled.p`
   text-align: center;
   width: 83%;
   line-height: 1.5rem;
-`;
-
-const CloseTabBtn = styled.button`
-    
 `;
 
 export default Congratulation
