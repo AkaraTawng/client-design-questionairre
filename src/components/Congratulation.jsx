@@ -8,9 +8,7 @@ function openWindow() {
     openedWindow = window.open('https://client-ui-design-questionairre.netlify.app/')
 }
 
-useEffect(() => {
-    openWindow();
-}, [])
+openWindow();
 
 const handleCloseTab = () => {
     openedWindow.close();
