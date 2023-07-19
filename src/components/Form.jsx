@@ -13,6 +13,7 @@ import TargetDemographic from './TargetDemographic'
 import BrandPersonality from './BrandPersonality';
 import DesignPreferences from './DesignPreferences';
 import FavoriteWebsites from './FavoriteWebsites';
+import Congratulation from "./Congratulation";
 import Submit from './Submit';
 import emailjs from '@emailjs/browser';
 import ConfettiExplosion from 'react-confetti-explosion';
@@ -26,7 +27,7 @@ import ConfettiExplosion from 'react-confetti-explosion';
 function Form() {
   const [page, setPage] = useState(0);
   const [isExploding, setIsExploding] = useState(false);
-  const FormTitles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+  const FormTitles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
   const form = useRef();
   const confettiProps = {
     force: 0.9,
@@ -58,6 +59,11 @@ function Form() {
 
   const handleDecrementClick = (e) => {
     setPage((currPage) => currPage - 1)
+  }
+
+  const handleSubmit = () => {
+    handleIncrementClick()
+    setIsExploding(!isExploding)
   }
 
   const pageDisplay = () => {
@@ -104,6 +110,9 @@ function Form() {
       case 13:
         return <Submit/>;
         break;
+      case 14:
+        return <Congratulation/>;
+        break;
     }
   }
   
@@ -115,9 +124,30 @@ function Form() {
         <FormWrapperInner>
         <Body>{pageDisplay()}</Body>
         <ButtonContainer>
-            { page > 0 && <PrevButton disabled={page === 0} type="button" onClick={handleDecrementClick}><i className="fa-solid fa-arrow-left-long"></i></PrevButton>}
-            {page < FormTitles.length - 1 && <NextButton  disabled={page === FormTitles.length - 1} type="button" onClick={handleIncrementClick}>{page > 0 ? <p>Next</p> : <p>Let's go!</p>}<i className="fa-solid fa-arrow-right-long"></i></NextButton>}
-            {page === FormTitles.length -1 && <SubmitBtn type="submit" onClick={() => setIsExploding(!isExploding)}><p>Submit</p><i class="fa-solid fa-paper-plane"></i></SubmitBtn>}
+            { page > 0 && 
+            <PrevButton 
+              disabled={page === 0} 
+              type="button" 
+              onClick={handleDecrementClick}>
+              <i className="fa-solid fa-arrow-left-long"></i>
+            </PrevButton>}
+            
+            {page < FormTitles.length - 2 && 
+            <NextButton  
+              disabled={page === FormTitles.length - 1} 
+              type="button" 
+              onClick={handleIncrementClick}>
+              {page > 0 ? <p>Next</p> : <p>Let's go!</p>}
+              <i className="fa-solid fa-arrow-right-long"></i>
+            </NextButton>}
+
+            {page === FormTitles.length - 2 && 
+            <SubmitBtn 
+              type="submit" 
+              onClick={handleSubmit}>
+              <p>Submit</p>
+              <i class="fa-solid fa-paper-plane"></i>
+            </SubmitBtn>}
             {isExploding && <ConfettiExplosion {...confettiProps}/>}
         </ButtonContainer>
         </FormWrapperInner>

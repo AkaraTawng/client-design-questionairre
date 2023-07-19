@@ -15,7 +15,6 @@ function Checkbox({ isChecked, label, checkHandler, index, name, value }) {
       />
       <Label htmlFor={`checkbox-${index}`}>{label}</Label>
         </CheckboxContainer>   
-        {/* {label === 'Other' && isChecked ? <Textarea name={label} placeholder={'Please explain.'}/> : null} */}
   </>)
 }
 

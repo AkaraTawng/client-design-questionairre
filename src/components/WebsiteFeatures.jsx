@@ -37,8 +37,6 @@ useEffect(() => {
   sessionStorage.setItem('user_otherWebsiteFeatures', JSON.stringify(otherTextArea));
 }, [otherTextArea])
 
-// console.log(websiteFeatures[3].checked)
-
   return (<>
     <Question>What features do you need on your website? Select all that apply.</Question>
 
