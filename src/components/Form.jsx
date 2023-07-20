@@ -196,7 +196,7 @@ const ButtonContainer = styled.div`
 
 const PrevButton = styled.button`
     position: absolute;
-    top: 3rem;
+    top: 4rem;
     left: 2rem;
     background-color: white;
     border: none;
