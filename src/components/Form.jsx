@@ -224,7 +224,7 @@ const NextButton = styled.button`
     border: none;
     padding: 0 5rem;
     border-radius: 70px;
-    font-size: 2.7rem;
+    font-size: 2.4rem;
     margin-top: 3rem;
     display: flex;
     align-items: center;
