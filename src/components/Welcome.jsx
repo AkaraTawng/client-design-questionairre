@@ -28,7 +28,8 @@ const HeaderMessage = styled.h1`
     font-family: 'Krona One', sans-serif;
     font-size: 6rem;
     letter-spacing: .5rem;
-    /* margin-top: 0vw; */
+    margin-top: -10vw;
+    margin-bottom: 5rem;
 `;
 
 const BodyText = styled.p`
@@ -37,6 +38,7 @@ const BodyText = styled.p`
   width: 80%;
   line-height: 5rem;
   font-size: 2.5rem;
+  margin-bottom: 6rem;
 `;
  
 export default Welcome
