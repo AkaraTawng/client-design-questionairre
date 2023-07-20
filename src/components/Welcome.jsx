@@ -36,7 +36,7 @@ const BodyText = styled.p`
   text-align: center;
   width: 80%;
   line-height: 5rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
 `;
  
 export default Welcome
