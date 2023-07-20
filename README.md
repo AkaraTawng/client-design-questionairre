@@ -11,3 +11,5 @@
 # Notable NPM Packages Used
 - [react-confetti-explosion](https://www.npmjs.com/package/react-confetti-explosion)
 
+# Features
+- progress bar

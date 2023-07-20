@@ -26,16 +26,19 @@ const HeaderMessage = styled.h1`
     color: #BA3D9C;
     text-transform: uppercase;
     font-family: 'Krona One', sans-serif;
-    font-size: 2rem;
+    font-size: 6rem;
     letter-spacing: .5rem;
-    margin-top: -15vw;
+    margin-top: -13vw;
+    margin-bottom: 5rem;
 `;
 
 const BodyText = styled.p`
   color: white;
   text-align: center;
   width: 80%;
-  line-height: 1.5rem;
+  line-height: 5rem;
+  font-size: 2.5rem;
+  margin-bottom: 6rem;
 `;
  
 export default Welcome
