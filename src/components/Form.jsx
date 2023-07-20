@@ -196,13 +196,13 @@ const ButtonContainer = styled.div`
 
 const PrevButton = styled.button`
     position: absolute;
-    top: 1.5rem;
-    left: .8rem;
+    top: 3rem;
+    left: 2rem;
     background-color: white;
     border: none;
     border-radius: 50%;
-    padding: .35rem .5rem;
-    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    font-size: 3rem;
     cursor: pointer;
 
     i {
