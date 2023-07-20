@@ -28,7 +28,7 @@ const HeaderMessage = styled.h1`
     font-family: 'Krona One', sans-serif;
     font-size: 6rem;
     letter-spacing: .5rem;
-    margin-top: -10vw;
+    margin-top: -13vw;
     margin-bottom: 5rem;
 `;
 
