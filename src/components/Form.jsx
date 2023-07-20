@@ -222,9 +222,9 @@ const PrevButton = styled.button`
 const NextButton = styled.button`
     background-color: white;
     border: none;
-    padding: 0 3rem;
-    border-radius: 30px;
-    font-size: 1rem;
+    padding: 0 5rem;
+    border-radius: 70px;
+    font-size: 2.7rem;
     margin-top: 3rem;
     display: flex;
     align-items: center;
