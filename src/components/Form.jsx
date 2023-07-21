@@ -228,6 +228,7 @@ const NextButton = styled.button`
     margin-top: 3rem;
     display: flex;
     align-items: center;
+    margin-bottom: 5rem;
     cursor: pointer; 
 
     p {
