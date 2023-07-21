@@ -8,9 +8,10 @@ export default function Question({children, id}) {
 
 const QuestionText = styled.p`
   color: white;
-  padding-bottom: .5rem;
-  border-bottom: 1px solid white;
+  padding-bottom: 1.5rem;
+  border-bottom: 4px solid white;
   width: 80%;
+  font-size: 3rem;
 
   &:not(:first-child){
     margin-top: 7rem;
