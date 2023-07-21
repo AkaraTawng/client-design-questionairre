@@ -24,19 +24,19 @@ display: flex;
 align-items: center;
 justify-content: flex-start;
 width: 80%;
-height: 5rem;
+height: 9rem;
 `;
 
 const Input = styled.input`
-  margin-right: 1rem;
-  height: 1.5rem;
-  width: 1.5rem;
+  margin-right: 1.5rem;
+  height: 1.7rem;
+  width: 1.7rem;
   accent-color: grey; 
 `;
 
 const Label = styled.label`
   color: white;
-  font-size: 1.7rem;
+  font-size: 1.9rem;
 `;
 
 export default Checkbox
