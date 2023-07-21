@@ -24,7 +24,7 @@ display: flex;
 align-items: center;
 justify-content: flex-start;
 width: 80%;
-height: 6rem;
+height: 3rem;
 margin-bottom: 6rem;
 `;
 
