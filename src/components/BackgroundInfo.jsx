@@ -111,7 +111,7 @@ const Input = styled.input`
 
 const Label = styled.label`
   color: white;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
 `;
 
 const SelectionContainer = styled.div`
