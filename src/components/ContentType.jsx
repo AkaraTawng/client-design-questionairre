@@ -75,7 +75,7 @@ margin-bottom: 3rem;
 
 &::placeholder {
   /* font-size: 1.5rem; */
-  font-size: 25px;
+  font-size: 35px;
 }
 &:focus {
   border: 2px solid gray;
