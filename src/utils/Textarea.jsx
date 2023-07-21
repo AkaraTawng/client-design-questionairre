@@ -17,10 +17,7 @@ function Textarea({placeholder, name, id}) {
 const TextareaInput = styled.textarea`
 width: 80%;
 height: 13rem;
-
-&#business-description {
-  margin-bottom: 5rem;
-}
+margin-bottom: 5rem;
 
 &#favsites {
   height: 12rem;
