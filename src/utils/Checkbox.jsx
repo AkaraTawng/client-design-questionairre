@@ -29,13 +29,14 @@ height: 5rem;
 
 const Input = styled.input`
   margin-right: 1rem;
-  height: 1.1rem;
-  width: 1.1rem;
+  height: 1.5rem;
+  width: 1.5rem;
   accent-color: grey; 
 `;
 
 const Label = styled.label`
   color: white;
+  font-size: 1.7rem;
 `;
 
 export default Checkbox
