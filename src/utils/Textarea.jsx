@@ -19,6 +19,10 @@ width: 80%;
 height: 13rem;
 margin-bottom: 5rem;
 
+&::placeholder {
+  font-size: 1.5rem;
+}
+
 &#favsites {
   height: 12rem;
 }
