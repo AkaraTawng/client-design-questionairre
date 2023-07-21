@@ -92,7 +92,8 @@ const PersonalInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 19vh;
+  height: 30vh;
+  margin-bottom: 3rem;
   
 `;
 
@@ -111,6 +112,7 @@ const Label = styled.span`
   color: #e6e5e5;
   pointer-events: none;
   transition: 0.6s;
+  /* bottom: -20px; */
 `;
 
 const Input = styled.input`
@@ -118,6 +120,7 @@ const Input = styled.input`
   padding: .6rem 1.2rem;
   border: none;
   font-size: .9rem;
+  font-size: 1rem;
   outline-color: transparent;
   background-color: transparent;
   border-bottom: 2px solid #e6e5e5;
@@ -130,10 +133,12 @@ const Input = styled.input`
   &:not(:placeholder-shown) + span,
   &:focus + span {
     color: white;
+    /* color: blue; */
     transform: translateX(10px);
     transform: translateY(-25px);
+    /* transform: translateY(0px); */
     font-size: 0.75rem;
-  }
+   } 
 `;
 
 export default PersonalInfo
