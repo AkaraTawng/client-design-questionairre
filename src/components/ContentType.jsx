@@ -66,7 +66,7 @@ function ContentType() {
 
 const TextareaInput = styled.textarea`
 width: 80%;
-height: 8rem;
+height: 10rem;
 padding: 1rem;
 border-radius: 20px;
 border: none;
@@ -75,7 +75,7 @@ margin-bottom: 3rem;
 
 &::placeholder {
   /* font-size: 1.5rem; */
-  font-size: 20px;
+  font-size: 25px;
 }
 &:focus {
   border: 2px solid gray;
