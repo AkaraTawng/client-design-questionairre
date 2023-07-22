@@ -18,7 +18,6 @@ const QuestionText = styled.p`
   }
 
   &#submit-message {
-    font-size: 1.3rem;
     padding-bottom: 1rem;
   }
 `;
