@@ -19,21 +19,22 @@ function Congratulation() {
 
 const Header = styled.h1`
   color: white;
-  font-size: 2rem;
+  font-size: 5rem;
   padding-bottom: .5rem;
   border-bottom: 3px solid white;
 `;
 
 const SubHeader = styled.h2`
   color: white;
-  font-size: 2rem;
+  font-size: 4.5rem;
 `;
 
 const CongratulationBodyText = styled.p`
   color: white;
   text-align: center;
   width: 83%;
-  line-height: 1.5rem;
+  line-height: 5rem;
+  font-size: 2.5rem;
 `;
 
 export default Congratulation
