@@ -8,21 +8,7 @@ const [email, setEmail] = useState(JSON.parse(sessionStorage.getItem('email' ?? 
 const [companyName, setCompanyName] = useState(JSON.parse(sessionStorage.getItem('companyName' ?? '')));
 const [companyIndustry, setCompanyIndustry] = useState(JSON.parse(sessionStorage.getItem('companyIndustry' ?? '')));
 
-// const [values, setValues] = useState({
-//   firstAndLastName: JSON.parse(sessionStorage.getItem('firstAndLastName' ?? ''),
-//   email: ,
-//   companyName: '', 
-//   companyIndustry: ''
-// });
-// console.log(values)
-// const handleChange = (name, e) => {
-//   console.log(name)
-//   sessionStorage.setItem(name, e.target.value)
-//   return (e) => {
-//     setValues({...values, [name]: e.target.value})
-//   }
 const handleNameChange = (e) => {
-  // console.log(firstAndLastName)
   sessionStorage.setItem('FirstAndLastName', JSON.stringify(e.target.value));
   setfirstAndLastName(e.target.value)
 }
@@ -54,7 +40,7 @@ const handleCompanyIndustryChange = (e) => {
         type='text' 
         value={firstAndLastName} 
         onChange={handleNameChange} 
-        placeholder=''/>
+        placeholder='placeholder'/>
         <Label>First and Last Name</Label>
       </InputContainer>
       <InputContainer>
@@ -63,7 +49,7 @@ const handleCompanyIndustryChange = (e) => {
         type='email' 
         value={email} 
         onChange={handleEmailChange} 
-        placeholder=''/>
+        placeholder='placeholder'/>
         <Label>Email</Label>
       </InputContainer>
       <InputContainer>
@@ -72,7 +58,7 @@ const handleCompanyIndustryChange = (e) => {
         type='text' 
         value={companyName} 
         onChange={handleCompanyNameChange} 
-        placeholder=''/>
+        placeholder='placeholder'/>
         <Label>Company Name</Label>
       </InputContainer>
       <InputContainer>
@@ -81,7 +67,7 @@ const handleCompanyIndustryChange = (e) => {
         type='text' 
         value={companyIndustry} 
         onChange={handleCompanyIndustryChange} 
-        placeholder=''/>
+        placeholder='placeholder'/>
         <Label>Company Industry</Label>
       </InputContainer>
     </PersonalInfoContainer>
@@ -92,9 +78,8 @@ const PersonalInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 30vh;
+  height: 40vh;
   margin-bottom: 3rem;
-  
 `;
 
 const InputContainer = styled.div`
@@ -108,24 +93,26 @@ const Label = styled.span`
   position: absolute;
   left: 0;
   padding-left: .2rem;
-  font-size: 1rem;
+  font-size: 2rem;
   color: #e6e5e5;
   pointer-events: none;
   transition: 0.6s;
-  /* bottom: -20px; */
 `;
 
 const Input = styled.input`
   width: 100%;
   padding: .6rem 1.2rem;
+  padding: 1rem 1.2rem;
   border: none;
-  font-size: .9rem;
-  font-size: 1rem;
+  font-size: 2rem;
   outline-color: transparent;
   background-color: transparent;
-  border-bottom: 2px solid #e6e5e5;
+  border-bottom: 3px solid #e6e5e5;
   color: white;
 
+  &::placeholder {
+    color: transparent;
+  }
   &:focus {
     border-bottom: 2px solid #fff;
   }
@@ -133,11 +120,9 @@ const Input = styled.input`
   &:not(:placeholder-shown) + span,
   &:focus + span {
     color: white;
-    /* color: blue; */
     transform: translateX(10px);
-    transform: translateY(-25px);
-    /* transform: translateY(0px); */
-    font-size: 0.75rem;
+    transform: translateY(-40px);
+    font-size: 1.2rem;
    } 
 `;
 
