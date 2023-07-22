@@ -79,7 +79,7 @@ const PersonalInfoContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: 40vh;
-  margin-bottom: 3rem;
+  margin-bottom: 7rem;
 `;
 
 const InputContainer = styled.div`
