@@ -63,12 +63,17 @@ useEffect(() => {
 
 
 const TextareaInput = styled.textarea`
-width: 70%;
-height: 8rem;
+width: 80%;
+height: 14rem;
 padding: 1rem;
 border-radius: 20px;
-border: none;
-margin-top: 1.5rem;
+margin-top: -4rem;
+margin-bottom: 3rem;
+
+&::placeholder {
+  font-size: 2.1rem;
+}
+
 &:focus {
   border: 2px solid gray;
 }
