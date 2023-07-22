@@ -4,7 +4,7 @@ import Textarea from '../utils/Textarea'
 function ServicesDescription() {
   return (<>
     <Question>What specific services does your company provide? List all that apply.</Question>
-    <Textarea name='user_servicesDescription'></Textarea>
+    <Textarea placeholder='Please describe your services here.' name='user_servicesDescription'></Textarea>
     </>)
 }
 
