@@ -46,7 +46,7 @@ function Form() {
       form.current, 
       import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
       .then((result) => {
-          console.log('message sent');
+          console.log(result, 'message sent');
       }, (error) => {
           console.log(error.text);
       });
