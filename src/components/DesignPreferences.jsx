@@ -15,7 +15,7 @@ function DesignPreferences() {
   }, [designPreferences]);
   
   return (<>
-    <Question>Do you have any specific design preferences that should be followed?</Question>
+    <Question className={'design-preferences'}>Do you have any specific design preferences that should be followed?</Question>
 
     <SelectionContainer>
       <Input
