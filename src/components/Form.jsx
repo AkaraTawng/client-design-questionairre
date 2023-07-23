@@ -15,14 +15,8 @@ import DesignPreferences from './DesignPreferences';
 import FavoriteWebsites from './FavoriteWebsites';
 import Congratulation from "./Congratulation";
 import Submit from './Submit';
-import emailjs from '@emailjs/browser';
+import emailjs, { sendForm } from '@emailjs/browser';
 import ConfettiExplosion from 'react-confetti-explosion';
-
-
-/**  TODO
- * Add name attribute to components that use checkboxes
- * */  
-
 
 function Form() {
   const [page, setPage] = useState(0);
@@ -38,7 +32,7 @@ function Form() {
   }
 
   const sendEmail = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     emailjs.sendForm(
       import.meta.env.VITE_EMAILJS_SERVICE_ID, 
@@ -64,6 +58,7 @@ function Form() {
   const handleSubmit = () => {
     handleIncrementClick()
     setIsExploding(!isExploding)
+    sendEmail();
   }
 
   const pageDisplay = () => {
