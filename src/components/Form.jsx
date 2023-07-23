@@ -119,7 +119,7 @@ function Form() {
   return (
     <FormWrapperOuter ref={form} onSubmit={sendEmail}>
         <ProgressBarContainer>
-          <ProgressBar style={{width: `${page * 8}%`}}></ProgressBar>
+          <ProgressBar style={{width: `${page * 7.14}%`}}></ProgressBar>
         </ProgressBarContainer>
         <FormWrapperInner>
         <Body>{pageDisplay()}</Body>
