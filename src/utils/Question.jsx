@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export default function Question({children, id}) {
+export default function Question({children, id, className}) {
   return (
-    <QuestionText id={id}>{children}</QuestionText>
+    <QuestionText className={className} id={id}>{children}</QuestionText>
   )
 }  
 
@@ -17,7 +17,7 @@ const QuestionText = styled.p`
     margin-top: 7rem;
   }
 
-  &#unique-qualities {
+  &.unique-qualities {
     width: 100%;
   }
 
