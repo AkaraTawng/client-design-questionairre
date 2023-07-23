@@ -12,9 +12,15 @@ const QuestionText = styled.p`
   border-bottom: 4px solid white;
   width: 80%;
   font-size: 2.5rem;
+  /* margin-top: -5rem; */
 
   &:not(:first-child){
     margin-top: 7rem;
+  }
+
+  &.design-preferences {
+    margin-top: -15rem;
+    margin-bottom: 3rem;
   }
 
   &.unique-qualities, &.target-demographic {
