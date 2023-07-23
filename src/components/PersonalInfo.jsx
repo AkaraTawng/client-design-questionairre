@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import { useState, useEffect } from 'react';
 
 function PersonalInfo() {
-const [firstAndLastName, setfirstAndLastName] = useState(JSON.parse(sessionStorage.getItem('FirstAndLastName' ?? '')));
-const [email, setEmail] = useState(JSON.parse(sessionStorage.getItem('email' ?? '')));
-const [companyName, setCompanyName] = useState(JSON.parse(sessionStorage.getItem('companyName' ?? '')));
-const [companyIndustry, setCompanyIndustry] = useState(JSON.parse(sessionStorage.getItem('companyIndustry' ?? '')));
+const [firstAndLastName, setfirstAndLastName] = useState(JSON.parse(sessionStorage.getItem('FirstAndLastName')) ?? '');
+const [email, setEmail] = useState(JSON.parse(sessionStorage.getItem('email')) ?? '');
+const [companyName, setCompanyName] = useState(JSON.parse(sessionStorage.getItem('companyName')) ?? '');
+const [companyIndustry, setCompanyIndustry] = useState(JSON.parse(sessionStorage.getItem('companyIndustry')) ?? '');
 
 const handleNameChange = (e) => {
   sessionStorage.setItem('FirstAndLastName', JSON.stringify(e.target.value));

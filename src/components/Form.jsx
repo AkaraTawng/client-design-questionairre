@@ -146,7 +146,7 @@ function Form() {
               type="submit" 
               onClick={handleSubmit}>
               <p>Submit</p>
-              <i class="fa-solid fa-paper-plane"></i>
+              <i className="fa-solid fa-paper-plane"></i>
             </SubmitBtn>}
             {isExploding && <ConfettiExplosion {...confettiProps}/>}
         </ButtonContainer>
