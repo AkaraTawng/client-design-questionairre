@@ -17,8 +17,14 @@ const QuestionText = styled.p`
     margin-top: 7rem;
   }
 
+  &#unique-qualities {
+    width: 100%;
+  }
+
   &#submit-message {
     padding-bottom: 1rem;
   }
+
+
 `;
 
