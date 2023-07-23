@@ -17,7 +17,7 @@ const QuestionText = styled.p`
     margin-top: 7rem;
   }
 
-  &.unique-qualities {
+  &.unique-qualities, &.target-demographic {
     width: 100%;
   }
 
