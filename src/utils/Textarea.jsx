@@ -34,7 +34,7 @@ margin-bottom: 5rem;
   height: 12rem;
 }
 
-&.unique-qualities {
+&.unique-qualities, &.target-demographic {
   width: 100%;
 }
 
