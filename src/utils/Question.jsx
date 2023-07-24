@@ -54,6 +54,11 @@ const QuestionText = styled.p`
     margin-bottom: 3rem;
   }
 
+  &.favorite-websites {
+    margin-top: -15rem;
+    margin-bottom: 3rem;
+  }
+
   &#submit-message {
     padding-bottom: 1rem;
   }
