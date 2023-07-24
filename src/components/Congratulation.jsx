@@ -22,7 +22,7 @@ const Header = styled.h1`
   font-size: 5rem;
   padding-bottom: .5rem;
   border-bottom: 3px solid white;
-  margin-top: -6rem;
+  margin-top: -13rem;
 `;
 
 const SubHeader = styled.h2`
