@@ -38,7 +38,7 @@ useEffect(() => {
 }, [otherTextArea])
 
   return (<>
-    <Question>What features do you need on your website? Select all that apply.</Question>
+    <Question className={'website-features'}>What features do you need on your website? Select all that apply.</Question>
 
     {websiteFeatures.map((websiteFeature, index) => (
       <Checkbox
