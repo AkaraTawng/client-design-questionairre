@@ -60,6 +60,8 @@ const QuestionText = styled.p`
   }
 
   &#submit-message {
+    margin-top: -15rem;
+    margin-bottom: 3rem;
     padding-bottom: 1rem;
   }
 
