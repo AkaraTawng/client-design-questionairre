@@ -43,8 +43,9 @@ const QuestionText = styled.p`
     margin-bottom: 3rem;
   }
 
-  
   &.unique-qualities, &.target-demographic {
+    margin-top: -15rem;
+    margin-bottom: 3rem;
     width: 100%;
   }
 
