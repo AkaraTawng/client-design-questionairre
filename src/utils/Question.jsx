@@ -28,11 +28,11 @@ const QuestionText = styled.p`
     margin-bottom: 3rem;
   }
   
-  &.services-description {
+
+  &.website-goals {
     margin-top: -15rem;
     margin-bottom: 3rem;
   }
-
   &.unique-qualities, &.target-demographic {
     width: 100%;
   }
