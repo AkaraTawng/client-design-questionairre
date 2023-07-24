@@ -220,7 +220,7 @@ const NextButton = styled.button`
     padding: 0 5rem;
     border-radius: 70px;
     font-size: 2.4rem;
-    margin-top: 3rem;
+    margin-top: 5rem;
     display: flex;
     align-items: center;
     cursor: pointer; 
