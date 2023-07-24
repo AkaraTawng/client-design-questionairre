@@ -49,6 +49,11 @@ const QuestionText = styled.p`
     width: 100%;
   }
 
+  &.brand-personality {
+    margin-top: -15rem;
+    margin-bottom: 3rem;
+  }
+
   &#submit-message {
     padding-bottom: 1rem;
   }
