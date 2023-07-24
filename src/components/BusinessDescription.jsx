@@ -3,7 +3,7 @@ import Question from '../utils/Question'
 import Textarea from '../utils/Textarea'
 function BusinessDescription() {
   return (<>
-    <Question>Describe your business in a few sentences.</Question>
+    <Question className={'business-description'}>Describe your business in a few sentences.</Question>
     <Textarea placeholder='Please describe your business here.' name="user_businessDescription"></Textarea>
   </>)
 }

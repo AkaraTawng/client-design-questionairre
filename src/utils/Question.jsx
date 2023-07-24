@@ -23,6 +23,11 @@ const QuestionText = styled.p`
     margin-bottom: 3rem;
   }
 
+  &.business-description {
+    margin-top: -15rem;
+    margin-bottom: 3rem;
+  }
+
   &.unique-qualities, &.target-demographic {
     width: 100%;
   }
