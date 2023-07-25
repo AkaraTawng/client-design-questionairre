@@ -39,6 +39,10 @@ const BodyText = styled.p`
   line-height: 5rem;
   font-size: 2.5rem;
   margin-bottom: 6rem;
+
+  &:nth-of-type(3) {
+    margin-bottom: 4rem;
+  }
 `;
  
 export default Welcome
