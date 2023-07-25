@@ -93,7 +93,7 @@ const Label = styled.span`
   position: absolute;
   left: 0;
   padding-left: .2rem;
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: #e6e5e5;
   pointer-events: none;
   transition: 0.6s;
@@ -101,8 +101,7 @@ const Label = styled.span`
 
 const Input = styled.input`
   width: 100%;
-  padding: .6rem 1.2rem;
-  padding: 1rem 1.2rem;
+  padding: 1.7rem 1.2rem;
   border: none;
   font-size: 2rem;
   outline-color: transparent;
@@ -122,7 +121,7 @@ const Input = styled.input`
     color: white;
     transform: translateX(10px);
     transform: translateY(-40px);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
    } 
 `;
 
