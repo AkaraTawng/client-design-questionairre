@@ -2,12 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import { useState, useEffect } from 'react';
 
-function PersonalInfo() {
-const [firstAndLastName, setfirstAndLastName] = useState(JSON.parse(sessionStorage.getItem('FirstAndLastName')) ?? '');
-const [email, setEmail] = useState(JSON.parse(sessionStorage.getItem('email')) ?? '');
-const [companyName, setCompanyName] = useState(JSON.parse(sessionStorage.getItem('companyName')) ?? '');
-const [companyIndustry, setCompanyIndustry] = useState(JSON.parse(sessionStorage.getItem('companyIndustry')) ?? '');
-
+function PersonalInfo({firstAndLastName, setfirstAndLastName, email, setEmail, companyName, setCompanyName, companyIndustry, setCompanyIndustry}) {
+// const [firstAndLastName, setfirstAndLastName] = useState(JSON.parse(sessionStorage.getItem('FirstAndLastName')) ?? '');
+// const [email, setEmail] = useState(JSON.parse(sessionStorage.getItem('email')) ?? '');
+// const [companyName, setCompanyName] = useState(JSON.parse(sessionStorage.getItem('companyName')) ?? '');
+// const [companyIndustry, setCompanyIndustry] = useState(JSON.parse(sessionStorage.getItem('companyIndustry')) ?? '');
+console.log(firstAndLastName, 'first last name prop')
 const handleNameChange = (e) => {
   sessionStorage.setItem('FirstAndLastName', JSON.stringify(e.target.value));
   setfirstAndLastName(e.target.value)
@@ -40,7 +40,9 @@ const handleCompanyIndustryChange = (e) => {
         type='text' 
         value={firstAndLastName} 
         onChange={handleNameChange} 
-        placeholder='placeholder'/>
+        placeholder='placeholder'
+        required
+        />
         <Label>First and Last Name</Label>
       </InputContainer>
       <InputContainer>
@@ -49,7 +51,9 @@ const handleCompanyIndustryChange = (e) => {
         type='email' 
         value={email} 
         onChange={handleEmailChange} 
-        placeholder='placeholder'/>
+        placeholder='placeholder'
+        required
+        />
         <Label>Email</Label>
       </InputContainer>
       <InputContainer>
@@ -58,7 +62,9 @@ const handleCompanyIndustryChange = (e) => {
         type='text' 
         value={companyName} 
         onChange={handleCompanyNameChange} 
-        placeholder='placeholder'/>
+        placeholder='placeholder'
+        required
+        />
         <Label>Company Name</Label>
       </InputContainer>
       <InputContainer>
@@ -67,7 +73,9 @@ const handleCompanyIndustryChange = (e) => {
         type='text' 
         value={companyIndustry} 
         onChange={handleCompanyIndustryChange} 
-        placeholder='placeholder'/>
+        placeholder='placeholder'
+        required
+        />
         <Label>Company Industry</Label>
       </InputContainer>
     </PersonalInfoContainer>
