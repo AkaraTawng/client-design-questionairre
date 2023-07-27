@@ -21,6 +21,13 @@ import ConfettiExplosion from 'react-confetti-explosion';
 function Form() {
   const [page, setPage] = useState(0);
   const [isExploding, setIsExploding] = useState(false);
+
+  const [firstAndLastName, setfirstAndLastName] = useState(JSON.parse(sessionStorage.getItem('FirstAndLastName')) ?? '');
+const [email, setEmail] = useState(JSON.parse(sessionStorage.getItem('email')) ?? '');
+const [companyName, setCompanyName] = useState(JSON.parse(sessionStorage.getItem('companyName')) ?? '');
+const [companyIndustry, setCompanyIndustry] = useState(JSON.parse(sessionStorage.getItem('companyIndustry')) ?? '');
+  
+
   const FormTitles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
   const form = useRef();
   const confettiProps = {
@@ -67,7 +74,16 @@ function Form() {
        return <Welcome/>;
        break;
       case 1:
-        return <PersonalInfo/>;
+        return <PersonalInfo 
+          firstAndLastName={firstAndLastName}
+          setfirstAndLastName={setfirstAndLastName}
+          email={email}
+          setEmail={setEmail}
+          companyName={companyName}
+          setCompanyName={setCompanyName}
+          companyIndustry={companyIndustry}
+          setCompanyIndustry={setCompanyIndustry}
+        />;
         break;
       case 2:
         return <BackgroundInfo/>;
