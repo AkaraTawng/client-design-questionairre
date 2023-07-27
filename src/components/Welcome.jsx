@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { devices } from '../utils/breakpoints';
 
 function Welcome() {
   return (<>
@@ -30,6 +31,9 @@ const HeaderMessage = styled.h1`
     letter-spacing: .5rem;
     margin-top: -13vw;
     margin-bottom: 5rem;
+    @media ${devices.mobileM} {
+      margin-top: 0;
+    }
 `;
 
 const BodyText = styled.p`
@@ -39,6 +43,10 @@ const BodyText = styled.p`
   line-height: 5rem;
   font-size: 2.5rem;
   margin-bottom: 6rem;
+  @media ${devices.mobileM} {
+      font-size: 2.3rem;
+      margin-bottom: 2rem;
+    }
 
   &:nth-of-type(3) {
     margin-bottom: 4rem;
