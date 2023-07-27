@@ -7,7 +7,7 @@ function PersonalInfo({firstAndLastName, setfirstAndLastName, email, setEmail, c
 // const [email, setEmail] = useState(JSON.parse(sessionStorage.getItem('email')) ?? '');
 // const [companyName, setCompanyName] = useState(JSON.parse(sessionStorage.getItem('companyName')) ?? '');
 // const [companyIndustry, setCompanyIndustry] = useState(JSON.parse(sessionStorage.getItem('companyIndustry')) ?? '');
-console.log(firstAndLastName, 'first last name prop')
+// console.log(firstAndLastName, 'first last name prop')
 const handleNameChange = (e) => {
   sessionStorage.setItem('FirstAndLastName', JSON.stringify(e.target.value));
   setfirstAndLastName(e.target.value)
