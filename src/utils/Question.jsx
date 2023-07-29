@@ -48,6 +48,10 @@ const QuestionText = styled.p`
   &.website-features {
     margin-top: -15rem;
     margin-bottom: 3rem;
+
+    @media ${devices.mobileM} {
+      margin-top: -5rem;
+    }
   }
 
   &.unique-qualities, &.target-demographic {
