@@ -34,6 +34,12 @@ const HeaderMessage = styled.h1`
     @media ${devices.mobileM} {
       margin-top: 0;
     }
+    
+    @media ${devices.mobileL} {
+      font-size: 5rem;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
 `;
 
 const BodyText = styled.p`
@@ -47,10 +53,21 @@ const BodyText = styled.p`
       font-size: 2.3rem;
       margin-bottom: 2rem;
     }
+    
+    @media ${devices.mobileL} {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
 
   &:nth-of-type(3) {
     margin-bottom: 4rem;
+
+    @media ${devices.mobileL} {
+      margin-bottom: 0rem;
+    }
   }
+
+  
 `;
  
 export default Welcome

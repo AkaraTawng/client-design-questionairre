@@ -17,9 +17,10 @@ import Congratulation from "./Congratulation";
 import Submit from './Submit';
 import emailjs, { sendForm } from '@emailjs/browser';
 import ConfettiExplosion from 'react-confetti-explosion';
+import { devices } from '../utils/breakpoints';
 
 function Form() {
-  const [page, setPage] = useState(14);
+  const [page, setPage] = useState(0);
   const [isExploding, setIsExploding] = useState(false);
 
   const [firstAndLastName, setfirstAndLastName] = useState(JSON.parse(sessionStorage.getItem('FirstAndLastName')) ?? '');
@@ -267,6 +268,10 @@ const NextButton = styled.button`
         color: transparent;
       }
     }
+
+@media ${devices.mobileL} {
+  font-size: 2rem;
+}
 `;
 
 const SubmitBtn = styled(NextButton)`
