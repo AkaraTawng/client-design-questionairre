@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {devices} from '../utils/breakpoints';
 
 export default function Question({children, id, className}) {
   return (
@@ -36,6 +37,12 @@ const QuestionText = styled.p`
   &.website-goals {
     margin-top: -15rem;
     margin-bottom: 3rem;
+  }
+
+  &.content-type {
+    @media ${devices.mobileM} {
+      margin-top: 10rem;
+    }
   }
  
   &.website-features {
