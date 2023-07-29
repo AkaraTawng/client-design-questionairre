@@ -41,7 +41,7 @@ function ContentType() {
 //  console.log(contentTypes)
 
   return (<>
-    <Question>What kind of content do you plan to publish on your website? Select all that apply. </Question>
+    <Question className={'content-type'}>What kind of content do you plan to publish on your website? Select all that apply. </Question>
     
     {contentTypes.map((contentType, index) => (
         <Checkbox
