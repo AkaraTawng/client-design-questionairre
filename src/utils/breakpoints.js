@@ -19,3 +19,12 @@ export const devices = {
 //@media ${device.deviceName} {
 
 //}
+
+/**
+ * mobileM ✔️
+ * mobileL
+ * tablet
+ * laptop
+ * desktopM 
+ * desktopL 
+ * */  
