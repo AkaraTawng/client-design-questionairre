@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
+import { devices } from "../utils/breakpoints"
 
 function Congratulation() {
   return (<>
@@ -23,6 +24,10 @@ const Header = styled.h1`
   padding-bottom: .5rem;
   border-bottom: 3px solid white;
   margin-top: -13rem;
+
+  @media ${devices.mobileM} {
+    margin-top: 4rem;
+  }
 `;
 
 const SubHeader = styled.h2`

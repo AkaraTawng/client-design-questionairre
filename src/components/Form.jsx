@@ -19,7 +19,7 @@ import emailjs, { sendForm } from '@emailjs/browser';
 import ConfettiExplosion from 'react-confetti-explosion';
 
 function Form() {
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(14);
   const [isExploding, setIsExploding] = useState(false);
 
   const [firstAndLastName, setfirstAndLastName] = useState(JSON.parse(sessionStorage.getItem('FirstAndLastName')) ?? '');
