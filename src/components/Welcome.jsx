@@ -24,22 +24,27 @@ function Welcome() {
 // font-family: 'Montserrat', sans-serif;
 
 const HeaderMessage = styled.h1`
-    color: #BA3D9C;
-    text-transform: uppercase;
-    font-family: 'Krona One', sans-serif;
-    font-size: 6rem;
-    letter-spacing: .5rem;
-    margin-top: -13vw;
-    margin-bottom: 5rem;
-    @media ${devices.mobileM} {
-      margin-top: 0;
-    }
-    
-    @media ${devices.mobileL} {
-      font-size: 5rem;
-      margin-top: 1rem;
-      margin-bottom: 2rem;
-    }
+  color: #BA3D9C;
+  text-transform: uppercase;
+  font-family: 'Krona One', sans-serif;
+  font-size: 6rem;
+  letter-spacing: .5rem;
+  margin-top: -13vw;
+  margin-bottom: 5rem;
+  @media ${devices.mobileM} {
+    margin-top: 0;
+  }
+  
+  @media ${devices.mobileL} {
+    font-size: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  @media ${devices.tablet} {
+    font-size: 4rem;
+    margin-top: 1rem;
+  }
 `;
 
 const BodyText = styled.p`
@@ -49,13 +54,19 @@ const BodyText = styled.p`
   line-height: 5rem;
   font-size: 2.5rem;
   margin-bottom: 6rem;
-  @media ${devices.mobileM} {
+    @media ${devices.mobileM} {
       font-size: 2.3rem;
       margin-bottom: 2rem;
     }
     
     @media ${devices.mobileL} {
       font-size: 2rem;
+      margin-bottom: .5rem;
+    }
+
+    @media ${devices.tablet} {
+      font-size: 1.5rem;
+      line-height: 3.5rem;
       margin-bottom: 2rem;
     }
 
@@ -65,9 +76,11 @@ const BodyText = styled.p`
     @media ${devices.mobileL} {
       margin-bottom: 0rem;
     }
+    
+    @media ${devices.tablet} {
+      margin-bottom: 1rem;
+    }
   }
-
-  
 `;
  
 export default Welcome

@@ -228,7 +228,6 @@ const PrevButton = styled.button`
         color: transparent;
       }
     }
-
 `;
 
 const NextButton = styled.button`
@@ -269,13 +268,15 @@ const NextButton = styled.button`
       }
     }
 
-@media ${devices.mobileL} {
-  font-size: 2rem;
-}
+  @media ${devices.mobileL} {
+    font-size: 2rem;
+  }
+
+  @media ${devices.tablet} {
+    font-size: 1.5rem;
+  }
 `;
 
-const SubmitBtn = styled(NextButton)`
-
-`;
+const SubmitBtn = styled(NextButton)``;
 
 export default Form
