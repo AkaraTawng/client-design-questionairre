@@ -44,7 +44,6 @@ const HeaderMessage = styled.h1`
   @media ${devices.tablet} {
     font-size: 4rem;
     margin-top: 1rem;
-    margin-bottom: 2rem;
   }
 `;
 
@@ -67,7 +66,7 @@ const BodyText = styled.p`
 
     @media ${devices.tablet} {
       font-size: 1.5rem;
-      line-height:3.5rem;
+      line-height: 3.5rem;
       margin-bottom: 2rem;
     }
 

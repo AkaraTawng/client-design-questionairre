@@ -228,7 +228,6 @@ const PrevButton = styled.button`
         color: transparent;
       }
     }
-
 `;
 
 const NextButton = styled.button`
