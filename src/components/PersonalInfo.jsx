@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useState, useEffect } from 'react';
+import { devices } from '../utils/breakpoints';
+
 
 function PersonalInfo({firstAndLastName, setfirstAndLastName, email, setEmail, companyName, setCompanyName, companyIndustry, setCompanyIndustry}) {
 // const [firstAndLastName, setfirstAndLastName] = useState(JSON.parse(sessionStorage.getItem('FirstAndLastName')) ?? '');
@@ -89,6 +91,11 @@ const PersonalInfoContainer = styled.div`
   height: 45vh;
   margin-bottom: 7rem;
   margin-top: -5rem;
+
+  @media ${devices.mobileL} {
+    height: 50vh;
+    margin-top: 5rem;
+  }
 `;
 
 const InputContainer = styled.div`
@@ -106,6 +113,10 @@ const Label = styled.span`
   color: #e6e5e5;
   pointer-events: none;
   transition: 0.6s;
+
+  @media ${devices.mobileL} {
+    font-size: 2rem;
+  }
 `;
 
 const Input = styled.input`
@@ -132,6 +143,8 @@ const Input = styled.input`
     transform: translateY(-40px);
     font-size: 1.5rem;
    } 
+
+
 `;
 
 export default PersonalInfo
