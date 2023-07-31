@@ -17,10 +17,13 @@ const FooterContainer = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  height: 2rem;
 `;
 
 const Copyright = styled.p`
-  
+  font-size: .7rem;
 `;
 
 export default Footer

@@ -27,10 +27,11 @@ const HeaderMessage = styled.h1`
   color: #BA3D9C;
   text-transform: uppercase;
   font-family: 'Krona One', sans-serif;
-  font-size: 6rem;
+  font-size: 2.2rem;
   letter-spacing: .5rem;
-  margin-top: -13vw;
-  margin-bottom: 5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
   @media ${devices.mobileM} {
     margin-top: 0;
     color: turquoise;
@@ -53,10 +54,10 @@ const HeaderMessage = styled.h1`
 const BodyText = styled.p`
   color: white;
   text-align: center;
-  width: 80%;
-  line-height: 5rem;
-  font-size: 2.5rem;
-  margin-bottom: 6rem;
+  width: 90%;
+  line-height: 2rem;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
     @media ${devices.mobileM} {
       font-size: 2.3rem;
       margin-bottom: 2rem;
@@ -74,7 +75,7 @@ const BodyText = styled.p`
     }
 
   &:nth-of-type(3) {
-    margin-bottom: 4rem;
+    margin-bottom: 0rem;
 
     @media ${devices.mobileL} {
       margin-bottom: 0rem;
