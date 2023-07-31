@@ -238,10 +238,10 @@ const PrevButton = styled.button`
 const NextButton = styled.button`
     background-color: white;
     border: none;
-    padding: 0 5rem;
+    padding: 1rem 2rem;
     border-radius: 70px;
-    font-size: 2.4rem;
-    margin-top: 3rem;
+    font-size: 1rem;
+    margin-top: 2rem;
     display: flex;
     align-items: center;
     cursor: pointer; 
