@@ -109,7 +109,7 @@ const Label = styled.span`
   position: absolute;
   left: 0;
   padding-left: .2rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #e6e5e5;
   pointer-events: none;
   transition: 0.6s;
@@ -141,7 +141,7 @@ const Input = styled.input`
     color: white;
     transform: translateX(10px);
     transform: translateY(-35px);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
    } 
 
 
