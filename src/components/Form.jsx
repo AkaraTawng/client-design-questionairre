@@ -228,6 +228,11 @@ const PrevButton = styled.button`
         color: transparent;
       }
     }
+
+    @media ${devices.mobileL} {
+      font-size: 2.3rem;
+      padding: 1rem 1.3rem;
+  }
 `;
 
 const NextButton = styled.button`
@@ -270,10 +275,11 @@ const NextButton = styled.button`
 
   @media ${devices.mobileL} {
     font-size: 2rem;
+    /* font-size: 5rem; */
   }
 
   @media ${devices.tablet} {
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
   }
 `;
 

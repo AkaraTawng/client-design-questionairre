@@ -33,18 +33,21 @@ const HeaderMessage = styled.h1`
   margin-bottom: 5rem;
   @media ${devices.mobileM} {
     margin-top: 0;
-  }
+    color: turquoise;
+  };
   
   @media ${devices.mobileL} {
+    color: blue;
     font-size: 5rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
-  }
+  };
 
-  @media ${devices.tablet} {
+  @media ${devices.tablet}{
+    color: green;
     font-size: 4rem;
     margin-top: 1rem;
-  }
+  };
 `;
 
 const BodyText = styled.p`
