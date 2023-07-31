@@ -211,7 +211,7 @@ const PrevButton = styled.button`
     background-color: white;
     border: none;
     border-radius: 50%;
-    padding: 1rem 1.2rem;
+    padding: 0.8rem 1rem;
     font-size: 1.1rem;
     cursor: pointer;
 

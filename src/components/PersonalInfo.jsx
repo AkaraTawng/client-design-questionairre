@@ -90,7 +90,6 @@ const PersonalInfoContainer = styled.div`
   justify-content: space-between;
   height: 45vh;
   margin-bottom: 7rem;
-  margin-top: -5rem;
 
   @media ${devices.mobileL} {
     height: 50vh;
@@ -103,13 +102,14 @@ const InputContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 2.3rem;
 `;
 
 const Label = styled.span`
   position: absolute;
   left: 0;
   padding-left: .2rem;
-  font-size: 2.4rem;
+  font-size: 1rem;
   color: #e6e5e5;
   pointer-events: none;
   transition: 0.6s;
@@ -121,9 +121,9 @@ const Label = styled.span`
 
 const Input = styled.input`
   width: 100%;
-  padding: 1.7rem 1.2rem;
+  padding: 1rem 1.2rem;
   border: none;
-  font-size: 2rem;
+  font-size: 1rem;
   outline-color: transparent;
   background-color: transparent;
   border-bottom: 3px solid #e6e5e5;
@@ -140,8 +140,8 @@ const Input = styled.input`
   &:focus + span {
     color: white;
     transform: translateX(10px);
-    transform: translateY(-40px);
-    font-size: 1.5rem;
+    transform: translateY(-35px);
+    font-size: 0.8rem;
    } 
 
 
