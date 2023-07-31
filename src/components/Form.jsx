@@ -189,9 +189,7 @@ const ProgressBar = styled.div`
    transition: all .5s ease;
 `;
 
-const FormWrapperInner = styled.div`
-
-`;
+const FormWrapperInner = styled.div``;
 
 const Body = styled.main`
     display: flex;
@@ -208,13 +206,13 @@ const ButtonContainer = styled.div`
 
 const PrevButton = styled.button`
     position: absolute;
-    top: 4rem;
-    left: 2rem;
+    top: 1.6rem;
+    left: .5rem;
     background-color: white;
     border: none;
     border-radius: 50%;
-    padding: 1rem 1.5rem;
-    font-size: 3rem;
+    padding: 1rem 1.2rem;
+    font-size: 1.1rem;
     cursor: pointer;
 
     i {
