@@ -43,15 +43,15 @@ function DesignPreferences() {
 }
 
 const Input = styled.input`
-  margin-right: 2rem;
-  height: 2rem;
-  width: 2rem;
+  margin-right: 1rem;
+  height: 1rem;
+  width: 1rem;
   accent-color: grey;
 `;
 
 const Label = styled.label`
   color: white;
-  font-size: 2.3rem;
+  font-size: .9rem;
 `;
 
 const SelectionContainer = styled.div`
@@ -59,7 +59,6 @@ const SelectionContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
   width: 80%;
-  height: 5rem;
   margin-bottom: 2rem;
 `;
 

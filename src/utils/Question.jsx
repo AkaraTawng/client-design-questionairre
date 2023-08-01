@@ -20,8 +20,8 @@ const QuestionText = styled.p`
   }
 
   &.design-preferences {
-    margin-top: -15rem;
-    margin-bottom: 3rem;
+    margin-top: -4rem;
+    margin-bottom: 1rem;
   }
 
   &.business-description {
