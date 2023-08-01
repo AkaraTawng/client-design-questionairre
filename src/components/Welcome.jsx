@@ -37,14 +37,12 @@ const HeaderMessage = styled.h1`
   };
   
   @media ${devices.mobileL} {
-    font-size: 5rem;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+  font-size: 3rem;
+  margin-top: 1.5rem;
   };
 
   @media ${devices.tablet}{
-    font-size: 4rem;
-    margin-top: 1rem;
+    
   };
 `;
 
@@ -55,12 +53,9 @@ const BodyText = styled.p`
   line-height: 2rem;
   font-size: 0.9rem;
   margin-bottom: 2rem;
-    @media ${devices.mobileM} {
-     
-    }
     
     @media ${devices.mobileL} {
-      
+      font-size: 1rem;
     }
 
     @media ${devices.tablet} {

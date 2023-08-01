@@ -228,8 +228,7 @@ const PrevButton = styled.button`
     }
 
     @media ${devices.mobileL} {
-      font-size: 2.3rem;
-      padding: 1rem 1.3rem;
+   
   }
 `;
 
@@ -272,7 +271,7 @@ const NextButton = styled.button`
     }
 
   @media ${devices.mobileL} {
-    font-size: 2rem;
+    /* font-size: 2rem; */
     /* font-size: 5rem; */
   }
 
