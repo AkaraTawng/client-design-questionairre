@@ -59,8 +59,7 @@ const QuestionText = styled.p`
   }
 
   &.favorite-websites {
-    margin-top: -15rem;
-    margin-bottom: 3rem;
+    margin-top: 5rem;
   }
 
   &#submit-message {
