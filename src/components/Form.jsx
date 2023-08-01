@@ -178,7 +178,7 @@ const FormWrapperOuter  = styled.form`
 
 const ProgressBarContainer = styled.div`
     background-color: white;
-    height: 15px;
+    height: 10px;
     width: 100vw;
     position: absolute;
     top: 0;

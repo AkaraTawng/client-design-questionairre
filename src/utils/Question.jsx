@@ -50,8 +50,7 @@ const QuestionText = styled.p`
   }
 
   &.unique-qualities, &.target-demographic {
-    margin-top: -15rem;
-    margin-bottom: 3rem;
+    margin-top: 2rem;
     width: 100%;
   }
 
