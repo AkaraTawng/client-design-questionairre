@@ -1,13 +1,7 @@
 ## Summary
-Fixes issue
-
-## Details
-
-### Why?
+Fixes issue: 
 
 ### How?
-
-## Additional Information
 
 ## Checks
 - [ ] Did you reference the issue? 
