@@ -55,8 +55,7 @@ const QuestionText = styled.p`
   }
 
   &.brand-personality {
-    margin-top: -15rem;
-    margin-bottom: 3rem;
+    margin-top: 5rem;
   }
 
   &.favorite-websites {
