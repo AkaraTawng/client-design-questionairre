@@ -20,10 +20,10 @@ function Congratulation() {
 
 const Header = styled.h1`
   color: white;
-  font-size: 5rem;
+  font-size: 2rem;
   padding-bottom: .5rem;
   border-bottom: 3px solid white;
-  margin-top: -13rem;
+  margin-bottom: 2rem;
 
   @media ${devices.mobileM} {
     margin-top: 4rem;
@@ -32,15 +32,17 @@ const Header = styled.h1`
 
 const SubHeader = styled.h2`
   color: white;
-  font-size: 4.5rem;
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
 `;
 
 const CongratulationBodyText = styled.p`
   color: white;
   text-align: center;
   width: 83%;
-  line-height: 5rem;
-  font-size: 2.5rem;
+  line-height: 1.5rem;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
 `;
 
 export default Congratulation
