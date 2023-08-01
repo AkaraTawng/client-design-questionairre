@@ -38,15 +38,12 @@ const QuestionText = styled.p`
 
   &.content-type {
     @media ${devices.mobileM} {
-      margin-top: 10rem;
+      margin-top: 5rem;
     }
   }
  
   &.website-features {
 
-    @media ${devices.mobileM} {
-      margin-top: -5rem;
-    }
   }
 
   &.unique-qualities, &.target-demographic {

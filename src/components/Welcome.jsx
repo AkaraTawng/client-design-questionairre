@@ -34,18 +34,15 @@ const HeaderMessage = styled.h1`
   text-align: center;
   @media ${devices.mobileM} {
     margin-top: 0;
-    color: turquoise;
   };
   
   @media ${devices.mobileL} {
-    color: blue;
     font-size: 5rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
   };
 
   @media ${devices.tablet}{
-    color: green;
     font-size: 4rem;
     margin-top: 1rem;
   };
@@ -59,30 +56,26 @@ const BodyText = styled.p`
   font-size: 0.9rem;
   margin-bottom: 2rem;
     @media ${devices.mobileM} {
-      font-size: 2.3rem;
-      margin-bottom: 2rem;
+     
     }
     
     @media ${devices.mobileL} {
-      font-size: 2rem;
-      margin-bottom: .5rem;
+      
     }
 
     @media ${devices.tablet} {
-      font-size: 1.5rem;
-      line-height: 3.5rem;
-      margin-bottom: 2rem;
+     
     }
 
   &:nth-of-type(3) {
     margin-bottom: 0rem;
 
     @media ${devices.mobileL} {
-      margin-bottom: 0rem;
+     
     }
     
     @media ${devices.tablet} {
-      margin-bottom: 1rem;
+   
     }
   }
 `;
