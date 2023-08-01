@@ -27,7 +27,7 @@ height: 13rem;
 margin-bottom: 5rem;
 
 &::placeholder {
-  font-size: 2rem;
+  font-size: 0.8rem;
 }
 
 &#favsites {

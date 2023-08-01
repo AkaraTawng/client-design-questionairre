@@ -25,8 +25,7 @@ const QuestionText = styled.p`
   }
 
   &.business-description {
-    margin-top: -15rem;
-    margin-bottom: 3rem;
+    margin-top: 5rem;
   }
 
   &.services-description {
