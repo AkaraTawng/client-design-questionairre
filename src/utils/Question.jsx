@@ -9,14 +9,14 @@ export default function Question({children, id, className}) {
 
 const QuestionText = styled.p`
   color: white;
-  padding-bottom: 1.5rem;
-  border-bottom: 4px solid white;
+  padding-bottom: .5rem;
+  border-bottom: 2px solid white;
   width: 80%;
-  font-size: 2.5rem;
+  font-size: 0.9rem;
   /* margin-top: -5rem; */
 
   &:not(:first-child){
-    margin-top: 7rem;
+    margin-top: 3rem;
   }
 
   &.design-preferences {
