@@ -115,7 +115,7 @@ const Label = styled.span`
   transition: 0.6s;
 
   @media ${devices.mobileL} {
-    font-size: 2rem;
+
   }
 `;
 
