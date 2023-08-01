@@ -92,8 +92,8 @@ const PersonalInfoContainer = styled.div`
   margin-bottom: 7rem;
 
   @media ${devices.mobileL} {
-    height: 50vh;
-    margin-top: 5rem;
+    height: 55vh;
+    margin-bottom: 3rem;
   }
 `;
 
@@ -114,9 +114,7 @@ const Label = styled.span`
   pointer-events: none;
   transition: 0.6s;
 
-  @media ${devices.mobileL} {
-
-  }
+ 
 `;
 
 const Input = styled.input`
@@ -127,7 +125,11 @@ const Input = styled.input`
   outline-color: transparent;
   background-color: transparent;
   border-bottom: 3px solid #e6e5e5;
-  color: white;
+  color: white; 
+  
+  @media ${devices.mobileL} {
+    padding: .5rem 1.2rem;
+  }
 
   &::placeholder {
     color: transparent;
