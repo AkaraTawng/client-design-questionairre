@@ -26,6 +26,7 @@ function BackgroundInfo() {
   }, [companyRegistered])
   
     return (<>
+    <BackgroundInfoContainer>
     <QuestionText>Do you have content ready for your site?</QuestionText>
     <SelectionContainer>
       <Input
@@ -73,31 +74,38 @@ function BackgroundInfo() {
       />
       <Label htmlFor="no-companyRegistered">No</Label>
     </SelectionContainer>
+    </BackgroundInfoContainer>
   </>)
 }
 
 const Input = styled.input`
-  margin-right: 2rem;
-  height: 2rem;
-  width: 2rem;
+  margin-right: 1rem;
+  height: 1rem;
+  width: 1rem;
   accent-color: grey;
 `;
 
 const Label = styled.label`
   color: white;
-  font-size: 2.3rem;
+  font-size: 0.9rem;
 `;
+
+const BackgroundInfoContainer = styled.div`
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
 
 const SelectionContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   width: 80%;
-  height: 5rem;
-  margin-bottom: 2rem;
+  height: 3rem;
+  margin-bottom: .5rem;
 
   &:nth-of-type(4) {
-    margin-bottom: 7rem;
+    /* margin-bottom: 7rem; */
   }
 `;
 
