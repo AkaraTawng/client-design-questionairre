@@ -33,8 +33,7 @@ const QuestionText = styled.p`
   }
   
   &.website-goals {
-    margin-top: -15rem;
-    margin-bottom: 3rem;
+    margin-top: 5rem;
   }
 
   &.content-type {
