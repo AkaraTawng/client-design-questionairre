@@ -24,7 +24,7 @@ const Header = styled.h1`
   padding-bottom: .5rem;
   border-bottom: 3px solid white;
   margin-bottom: 2rem;
-
+  margin-top: -3rem;
   @media ${devices.mobileM} {
     margin-top: 4rem;
   }
