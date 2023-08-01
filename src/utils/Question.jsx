@@ -29,8 +29,7 @@ const QuestionText = styled.p`
   }
 
   &.services-description {
-    margin-top: -15rem;
-    margin-bottom: 3rem;
+    margin-top: 5rem;
   }
   
   &.website-goals {
