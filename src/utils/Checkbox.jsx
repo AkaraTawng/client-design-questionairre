@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Textarea from "./Textarea";
+import { devices } from "./breakpoints";
 
 
 function Checkbox({ isChecked, label, checkHandler, index, name, value }) {
@@ -37,6 +38,9 @@ const Input = styled.input`
 const Label = styled.label`
   color: white;
   font-size: 0.9rem;
+  @media ${devices.tablet} {
+    font-size: 1rem;
+  }
 `;
 
 export default Checkbox
