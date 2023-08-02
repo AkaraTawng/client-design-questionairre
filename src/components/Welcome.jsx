@@ -46,6 +46,10 @@ const HeaderMessage = styled.h1`
   margin-top: 1rem;
   margin-bottom: 2rem;
   };
+
+  @media ${devices.laptop} {
+    margin-bottom: 3rem;
+  }
 `;
 
 const BodyText = styled.p`
@@ -65,6 +69,12 @@ const BodyText = styled.p`
      width: 70%;
      margin-bottom: 3rem;
     }
+    
+    @media ${devices.laptop} {
+      margin-bottom: 4rem;
+    }
+    
+  
 
   &:nth-of-type(3) {
     margin-bottom: 0rem;
