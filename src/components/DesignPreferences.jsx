@@ -2,6 +2,7 @@ import Question from "../utils/Question"
 import { useState, useEffect } from "react";
 import RadioButton from "../utils/RadioButton"
 import styled from "styled-components";
+import { devices } from "../utils/breakpoints";
 
 function DesignPreferences() {
   const [designPreferences, setDesignPreferences] = useState(JSON.parse(sessionStorage.getItem('user_designPreferences')) ?? 'Yes');
@@ -52,6 +53,9 @@ const Input = styled.input`
 const Label = styled.label`
   color: white;
   font-size: .9rem;
+  @media ${devices.tablet} {
+    font-size: 1rem;
+  }
 `;
 
 const SelectionContainer = styled.div`
