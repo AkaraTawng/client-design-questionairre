@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useState } from 'react';
+import { devices } from './breakpoints';
 
 function Textarea({placeholder, name, id, className}) {
   const [value, setValue] = useState(JSON.parse(sessionStorage.getItem(name)));
@@ -32,6 +33,9 @@ margin-bottom: 5rem;
 
 &#favsites {
   height: 12rem;
+  @media ${devices.laptop} {
+    width: 50%;
+  }
 }
 
 &.unique-qualities, &.target-demographic {
