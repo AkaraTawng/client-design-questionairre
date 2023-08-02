@@ -64,6 +64,9 @@ const QuestionText = styled.p`
 
   &.favorite-websites {
     margin-top: 5rem;
+    @media ${devices.laptop} {
+     width: 50%;
+      }
   }
 
   &#submit-message {
