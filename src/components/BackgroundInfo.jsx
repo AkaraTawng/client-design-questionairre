@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import QuestionText from '../utils/Question';
 import RadioButton from '../utils/RadioButton';
 import { useState } from 'react';
+import { devices } from '../utils/breakpoints';
 
 
 function BackgroundInfo() {
@@ -27,7 +28,7 @@ function BackgroundInfo() {
   
     return (<>
     <BackgroundInfoContainer>
-    <QuestionText>Do you have content ready for your site?</QuestionText>
+    <QuestionText className={'background-info'}>Do you have content ready for your site?</QuestionText>
     <SelectionContainer>
       <Input
         type="radio"
@@ -51,7 +52,7 @@ function BackgroundInfo() {
       <Label htmlFor="no-content">No</Label>
     </SelectionContainer>
 
-    <QuestionText>Is your company legally registered?</QuestionText>
+    <QuestionText className={'background-info'}>Is your company legally registered?</QuestionText>
     <SelectionContainer>
       <Input
         type="radio"
@@ -82,12 +83,17 @@ const Input = styled.input`
   margin-right: 1rem;
   height: 1rem;
   width: 1rem;
-  accent-color: grey;
+  accent-color: grey; 
+  @media ${devices.tablet} {
+    height: 1.1rem;
+    width: 1.1rem;  
+  }
 `;
 
 const Label = styled.label`
   color: white;
   font-size: 0.9rem;
+ 
 `;
 
 const BackgroundInfoContainer = styled.div`
