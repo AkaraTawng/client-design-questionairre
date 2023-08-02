@@ -42,7 +42,9 @@ const HeaderMessage = styled.h1`
   };
 
   @media ${devices.tablet}{
-    
+  font-size: 3.2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
   };
 `;
 
@@ -59,18 +61,16 @@ const BodyText = styled.p`
     }
 
     @media ${devices.tablet} {
-     
+     font-size: 1.1rem;
+     width: 70%;
+     margin-bottom: 3rem;
     }
 
   &:nth-of-type(3) {
     margin-bottom: 0rem;
-
-    @media ${devices.mobileL} {
-     
-    }
     
     @media ${devices.tablet} {
-   
+   margin-bottom: 1.5rem;
     }
   }
 `;

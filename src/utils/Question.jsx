@@ -13,7 +13,6 @@ const QuestionText = styled.p`
   border-bottom: 2px solid white;
   width: 80%;
   font-size: 0.9rem;
-  /* margin-top: -5rem; */
 
   &:not(:first-child){
     margin-top: 3rem;
