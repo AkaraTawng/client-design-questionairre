@@ -14,8 +14,16 @@ const QuestionText = styled.p`
   width: 80%;
   font-size: 0.9rem;
 
+  @media ${devices.tablet} {
+    font-size: 1rem;
+  }
+
   &:not(:first-child){
     margin-top: 3rem;
+  }
+
+  &.background-info {
+    
   }
 
   &.design-preferences {
