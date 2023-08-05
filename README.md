@@ -13,3 +13,4 @@
 
 # Features
 - progress bar
+- Page Transition Animations
