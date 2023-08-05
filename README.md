@@ -5,6 +5,7 @@
 
 # Tech Stack
 - React
+- Framer Motion
 - Vite
 - Styled Components
 
