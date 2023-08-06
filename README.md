@@ -15,3 +15,4 @@
 # Features
 - progress bar
 - Page Transition Animations
+- Submit Confetti Explosion
