@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { useState, useEffect } from 'react';
 import { devices } from '../utils/breakpoints';
+import { motion } from 'framer-motion';
 
 
 function PersonalInfo({firstAndLastName, setfirstAndLastName, email, setEmail, companyName, setCompanyName, companyIndustry, setCompanyIndustry}) {
@@ -84,7 +85,7 @@ const handleCompanyIndustryChange = (e) => {
   )
 }
 
-const PersonalInfoContainer = styled.div`
+const PersonalInfoContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -16,6 +16,3 @@ export const devices = {
     desktopL: `(min-width: ${size.desktopL})`
 };
 
-//@media ${device.deviceName} {
-
-//}
