@@ -14,6 +14,6 @@
 - [react-confetti-explosion](https://www.npmjs.com/package/react-confetti-explosion)
 
 # Features
-- progress bar
+- Progress Bar
 - Page Transition Animations
 - Submit Confetti Explosion
